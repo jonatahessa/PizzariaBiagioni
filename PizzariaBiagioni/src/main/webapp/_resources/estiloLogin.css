@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#principal {
+  margin: auto;
+  float: none;
+}
+
+#principal h1 {
+  text-align: center;
+}
+
+#principal input, button {
+  margin-top: 4%;
+  width: 100%;
+}
