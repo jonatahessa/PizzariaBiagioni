@@ -198,109 +198,20 @@ section {
 #sessaocardapio {
 }
 
-@media only screen and (max-device-width: 600px) {
-  *, *:before, *:after {box-sizing:  border-box !important;}
-
-
-  .row {
-      -moz-column-width: 100em;
-      -webkit-column-width: 100em;
-      -moz-column-gap: 1em;
-      -webkit-column-gap: 1em;
-
-  }
-
-  .menu-category {
-      display: inline-block;
-      margin: 0.25rem;
-      padding: 1rem;
-      width: 100%;
-  }
-
-  .corpo-cardapio {
-  }
-
-  .cardapio {
-      font-family: 'Jaldi', sans-serif;
-      font-weight: bold;
-  }
-
-  .cardapio h2 {
-      font-size: 50px;
-      font-weight: bold;
-  }
-
-  .titulopreco * {
-      display: inline;
-  }
-
-  .titulopreco h3 {
-      color: red;
-      font-size: 40px;
-  }
-
-  .titulopreco p {
-      float: right;
-      font-size: 40px;
-      color: green;
-  }
-
-  .descricao {
-    font-size: 30px;
-  }
+.preco-broto {
+  float: right;
 }
 
-@media only screen and (min-device-width: 601px) {
-  *, *:before, *:after {box-sizing:  border-box !important;}
-
-  .row {
-      -moz-column-width: 22em;
-      -webkit-column-width: 22em;
-      -moz-column-gap: 1em;
-      -webkit-column-gap: 1em;
-
-  }
-
-  .menu-category {
-      display: inline-block;
-      margin:  0.25rem;
-      padding:  1rem;
-      width:  100%;
+.preco-grande {
+  float: right;
+  display: none;
 }
 
-
-.corpo-cardapio {
+.preco-familia {
+  float: right;
+  display: none;
 }
 
-.cardapio {
-    font-family: 'Jaldi', sans-serif;
-    font-weight: bold;
-}
-
-.cardapio h2 {
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.titulopreco * {
-    display: inline;
-}
-
-.titulopreco h3 {
-    color: red;
-    font-size: 25px;
-}
-
-.titulopreco p {
-    float: right;
-    font-size: 25px;
-    color: green;
-}
-
-.descricao {
-  font-size: 20px;
-}
-}
 
 #sessaolocalizacao {
 }

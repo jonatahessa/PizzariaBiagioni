@@ -28,27 +28,19 @@ public class GetSabores extends HttpServlet {
             throws ServletException, IOException, Exception {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
-        List<Produto> bacon = Utils.ListarPizzasPaginaInicialBacon();
-        List<Produto> calabresa = Utils.ListarPizzasPaginaInicialCalabresa();
-        List<Produto> frango = Utils.ListarPizzasPaginaInicialFrango();
-        List<Produto> lombo = Utils.ListarPizzasPaginaInicialLombo();
-        List<Produto> vegetais = Utils.ListarPizzasPaginaInicialVegetais();
-        List<Produto> frutos = Utils.ListarPizzasPaginaInicialFrutos();
-        List<Produto> presunto = Utils.ListarPizzasPaginaInicialPresunto();
-        List<Produto> queijo = Utils.ListarPizzasPaginaInicialQueijo();
-        List<Produto> especiais = Utils.ListarPizzasPaginaInicialEspeciais();
-        List<Produto> doces = Utils.ListarPizzasPaginaInicialDoces();
+        List<Produto> pizza = Utils.ListarPizzasPaginaInicialPizzas();
+        List<Produto> pizzaDoce = Utils.ListarPizzasPaginaInicialPizzasDoces();
+        List<Produto> massa = Utils.ListarPizzasPaginaInicialMassas();
+        List<Produto> combinado = Utils.ListarPizzasPaginaInicialCombinados();
+        List<Produto> sobremesa = Utils.ListarPizzasPaginaInicialSobremesas();
+        List<Produto> bebida = Utils.ListarPizzasPaginaInicialBebidas();
         List<Produto> promo = Utils.ListarPizzasPaginaInicialPromocoes();
-        request.setAttribute("bacon", bacon);
-        request.setAttribute("calabresa", calabresa);
-        request.setAttribute("frango", frango);
-        request.setAttribute("lombo", lombo);
-        request.setAttribute("vegetais", vegetais);
-        request.setAttribute("frutos", frutos);
-        request.setAttribute("presunto", presunto);
-        request.setAttribute("queijo", queijo);
-        request.setAttribute("especiais", especiais);
-        request.setAttribute("doces", doces);
+        request.setAttribute("pizza", pizza);
+        request.setAttribute("pizzaDoce", pizzaDoce);
+        request.setAttribute("massa", massa);
+        request.setAttribute("combinado", combinado);
+        request.setAttribute("sobremesa", sobremesa);
+        request.setAttribute("bebida", bebida);
         if (promo != null) {
             for (Produto prod : promo) {
                 String promoConvert = prod.getDescricao().replaceAll("\n", "<br/>");

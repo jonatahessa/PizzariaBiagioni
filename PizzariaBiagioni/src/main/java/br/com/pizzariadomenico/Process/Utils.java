@@ -24,71 +24,43 @@ public class Utils {
         return pizzas;
     }
 
-    public static List<Produto> ListarPizzasPaginaInicialBacon() throws Exception {
+    public static List<Produto> ListarPizzasPaginaInicialPizzas() throws Exception {
         List<Produto> pizzas = new ArrayList<>();
-        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialBacon();
+        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialPizzas();
 
         return pizzas;
     }
 
-    public static List<Produto> ListarPizzasPaginaInicialCalabresa() throws Exception {
+    public static List<Produto> ListarPizzasPaginaInicialPizzasDoces() throws Exception {
         List<Produto> pizzas = new ArrayList<>();
-        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialCalabresa();
-
-        return pizzas;
-    }
-    
-    public static List<Produto> ListarPizzasPaginaInicialFrango() throws Exception {
-        List<Produto> pizzas = new ArrayList<>();
-        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialFrango();
-
-        return pizzas;
-    }
-
-    public static List<Produto> ListarPizzasPaginaInicialLombo() throws Exception {
-        List<Produto> pizzas = new ArrayList<>();
-        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialLombo();
+        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialPizzasDoces();
 
         return pizzas;
     }
     
-    public static List<Produto> ListarPizzasPaginaInicialVegetais() throws Exception {
+    public static List<Produto> ListarPizzasPaginaInicialMassas() throws Exception {
         List<Produto> pizzas = new ArrayList<>();
-        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialVegetais();
+        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialMassas();
 
         return pizzas;
     }
-    public static List<Produto> ListarPizzasPaginaInicialFrutos() throws Exception {
-        List<Produto> pizzas = new ArrayList<>();
-        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialFrutos();
 
-        return pizzas;
-    }
-    
-    public static List<Produto> ListarPizzasPaginaInicialPresunto() throws Exception {
+    public static List<Produto> ListarPizzasPaginaInicialCombinados() throws Exception {
         List<Produto> pizzas = new ArrayList<>();
-        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialPresunto();
+        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialCombinados();
 
         return pizzas;
     }
     
-    public static List<Produto> ListarPizzasPaginaInicialQueijo() throws Exception {
+    public static List<Produto> ListarPizzasPaginaInicialSobremesas() throws Exception {
         List<Produto> pizzas = new ArrayList<>();
-        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialQueijo();
+        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialSobremesas();
 
         return pizzas;
     }
-    
-    public static List<Produto> ListarPizzasPaginaInicialEspeciais() throws Exception {
+    public static List<Produto> ListarPizzasPaginaInicialBebidas() throws Exception {
         List<Produto> pizzas = new ArrayList<>();
-        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialEspeciais();
-
-        return pizzas;
-    }
-    
-    public static List<Produto> ListarPizzasPaginaInicialDoces() throws Exception {
-        List<Produto> pizzas = new ArrayList<>();
-        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialDoces();
+        pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialBebidas();
 
         return pizzas;
     }

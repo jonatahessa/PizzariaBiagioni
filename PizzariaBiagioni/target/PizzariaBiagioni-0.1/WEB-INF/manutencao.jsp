@@ -15,25 +15,30 @@
     </head>
     <body>
         <section id="sessaoprincipal" class="container-fluid">
-
+          <div class="cabecalho">
           <div class="row">
 
-            <div id="titulo">
+            <div id="titulo" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h1>Manutenção</h1>
             </div>
+          </div>
 
-            <div id="logout">
+          <div class="row">
+            <div id="logout" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
               <form action="Logout" method="post">
                 <button type="submit" name="button"><span class="glyphicon glyphicon-off"></span> Sair</button>
               </form>
-          </div>
-          </div>
-
-
-
+            </div>
             <div id="divnovo">
                 <button id="novo" type="button" class="btn btn-primary" name="novo">Novo</button>
             </div>
+          </div>
+          </div>
+
+
+
+
+
 
             <div id="pizzas">
 
@@ -42,7 +47,9 @@
                         <th>Código</th>
                         <th>Nome</th>
                         <th>Ingredientes</th>
-                        <th>Preço</th>
+                        <th>Broto</th>
+                        <th>Grande</th>
+                        <th>Familia</th>
                         <th>Status</th>
                         <th>Tipo</th>
                         <th>Editar</th>
@@ -53,14 +60,18 @@
                             <td class="celulas">${pizzas.codigo}</td>
                             <td class="celulas">${pizzas.nome}</td>
                             <td>${pizzas.descricao}</td>
-                            <td class="celulas">${pizzas.preco}</td>
+                            <td class="celulas">${pizzas.precoBroto}</td>
+                            <td class="celulas">${pizzas.precoGrande}</td>
+                            <td class="celulas">${pizzas.precoFamilia}</td>
                             <td class="celulas">${pizzas.ativo}</td>
                             <td class="celulas">${pizzas.tipo}</td>
                             <td><form action="#" onsubmit="return abrirEditar(this);" method="post">
                                     <input type="hidden" name="codigo" value="${pizzas.codigo}"/>
                                     <input type="hidden" name="nome" value="${pizzas.nome}"/>
                                     <input type="hidden" name="descricao" value="${pizzas.descricao}"/>
-                                    <input type="hidden" name="preco" value="${pizzas.preco}"/>
+                                    <input type="hidden" name="preco" value="${pizzas.precoBroto}"/>
+                                    <input type="hidden" name="preco" value="${pizzas.precoGrande}"/>
+                                    <input type="hidden" name="preco" value="${pizzas.precoFamilia}"/>
                                     <input type="hidden" name="tipo" value="${pizzas.tipo}"/>
                                     <button type="submit" class="btn btn-warning editar" name="botaoeditar">Editar</button>
                                 </form>
@@ -98,27 +109,33 @@
 
                 <div id="descricao" class="form-group camposform">
                     <label for="descricao">Descrição</label>
-                    <textarea class="form-control inputsnovo" rows="4" name="descricao"></textarea>
+                    <textarea class="form-control inputsnovo" rows="3" name="descricao"></textarea>
                 </div>
 
-                <div id="preco" class="form-group camposform">
-                    <label for="preco">Preço</label>
-                    <input class="form-control inputsnovo" type="text" name="preco"/>
+                <div id="broto" class="form-group camposform">
+                    <label for="broto">Broto</label>
+                    <input class="form-control inputsnovo" type="text" name="precoBroto"/>
+                </div>
+
+                <div id="grande" class="form-group camposform">
+                    <label for="grande">Grande</label>
+                    <input class="form-control inputsnovo" type="text" name="precoGrande"/>
+                </div>
+
+                <div id="familia" class="form-group camposform">
+                    <label for="familia">Familia</label>
+                    <input class="form-control inputsnovo" type="text" name="precoFamilia"/>
                 </div>
 
                 <div id="tipo" class="form-group camposform">
                     <label for="tipo">Tipo</label>
                     <select class="form-control" name="tipo">
-                        <option value="BACON">Bacon</option>
-                        <option value="CALABRESA">Calabresa</option>
-                        <option value="FRANGO">Frango</option>
-                        <option value="LOMBO">Lombo</option>
-                        <option value="VEGETAIS">Vegetais</option>
-                        <option value="FRUTOS">Frutos do Mar</option>
-                        <option value="PRESUNTO">Presunto</option>
-                        <option value="QUEIJO">Queijo</option>
-                        <option value="ESPECIAIS">Especiais</option>
-                        <option value="DOCES">Pizzas Doces</option>
+                        <option value="PIZZA">Pizza</option>
+                        <option value="DOCE">Pizza Doce</option>
+                        <option value="MASSA">Massa</option>
+                        <option value="COMBINADO">Combinado</option>
+                        <option value="SOBREMESA">Sobremesa</option>
+                        <option value="BEBIDA">Bebida</option>
                         <option value="PROMOCAO">Promoção</option>
                     </select>
                 </div>
@@ -139,8 +156,7 @@
                 </div>
 
                 <div id="codigoeditar" class="form-group camposform">
-                    <label for="codigo">Código</label>
-                    <input class="form-control inputseditar" type="text" name="codigo" readonly/>
+                    <input class="form-control inputseditar" type="hidden" name="codigo"/>
                 </div>
 
                 <div id="nomeeditar" class="form-group camposform">
@@ -150,12 +166,22 @@
 
                 <div id="descricaoeditar" class="form-group camposform">
                     <label for="descricao">Descrição</label>
-                    <textarea class="form-control inputseditar" rows="4" name="descricao"></textarea>
+                    <textarea class="form-control inputseditar" rows="3" name="descricao"></textarea>
                 </div>
 
-                <div id="precoeditar" class="form-group camposform">
-                    <label for="preco">Preço</label>
-                    <input class="form-control inputseditar" type="text" name="preco"/>
+                <div id="broto" class="form-group camposform">
+                    <label for="broto">Broto</label>
+                    <input class="form-control inputseditar" type="text" name="precoBrotoEditar"/>
+                </div>
+
+                <div id="grande" class="form-group camposform">
+                    <label for="grande">Grande</label>
+                    <input class="form-control inputseditar" type="text" name="precoGrandeEditar"/>
+                </div>
+
+                <div id="familia" class="form-group camposform">
+                    <label for="familia">Familia</label>
+                    <input class="form-control inputseditar" type="text" name="precoFamiliaEditar"/>
                 </div>
 
                 <div id="tipoeditar" class="form-group camposform">

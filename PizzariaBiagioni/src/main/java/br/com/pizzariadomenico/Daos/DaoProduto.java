@@ -34,7 +34,9 @@ public class DaoProduto {
                 pizza.setCodigo(result.getInt("ID"));
                 pizza.setNome(result.getString("Nome"));
                 pizza.setDescricao(result.getString("Descricao"));
-                pizza.setPreco(result.getString("Preco"));
+                pizza.setPrecoBroto(result.getString("PrecoBroto"));
+                pizza.setPrecoGrande(result.getString("PrecoGrande"));
+                pizza.setPrecoFamilia(result.getString("PrecoFamilia"));
                 pizza.setAtivo(result.getString("Ativo"));
                 pizza.setTipo(result.getString("Tipo"));
                 listaPizza.add(pizza);
@@ -60,82 +62,50 @@ public class DaoProduto {
         return executarConsulta(sql);
     }
 
-    public static List<Produto> listarPaginaInicialBacon()
+    public static List<Produto> listarPaginaInicialPizzas()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'BACON';";
+                + "Tipo = 'PIZZA';";
 
         return executarConsulta(sql);
     }
     
-    public static List<Produto> listarPaginaInicialCalabresa()
+    public static List<Produto> listarPaginaInicialMassas()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'CALABRESA';";
+                + "Tipo = 'MASSA';";
 
         return executarConsulta(sql);
     }
     
-    public static List<Produto> listarPaginaInicialFrango()
+    public static List<Produto> listarPaginaInicialCombinados()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'FRANGO';";
+                + "Tipo = 'COMBINADO';";
 
         return executarConsulta(sql);
     }
     
-    public static List<Produto> listarPaginaInicialLombo()
+    public static List<Produto> listarPaginaInicialSobremesas()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'LOMBO';";
+                + "Tipo = 'SOBREMESA';";
 
         return executarConsulta(sql);
     }
     
-    public static List<Produto> listarPaginaInicialVegetais()
+    public static List<Produto> listarPaginaInicialPizzasDoces()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'VEGETAIS';";
+                + "Tipo = 'DOCE';";
 
         return executarConsulta(sql);
     }
     
-    public static List<Produto> listarPaginaInicialFrutos()
+    public static List<Produto> listarPaginaInicialBebidas()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'FRUTOS';";
-
-        return executarConsulta(sql);
-    }
-    
-    public static List<Produto> listarPaginaInicialPresunto()
-            throws SQLException, Exception {
-        String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'PRESUNTO';";
-
-        return executarConsulta(sql);
-    }
-    
-    public static List<Produto> listarPaginaInicialQueijo()
-            throws SQLException, Exception {
-        String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'QUEIJO';";
-
-        return executarConsulta(sql);
-    }
-    
-    public static List<Produto> listarPaginaInicialEspeciais()
-            throws SQLException, Exception {
-        String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'ESPECIAIS';";
-
-        return executarConsulta(sql);
-    }
-    
-    public static List<Produto> listarPaginaInicialDoces()
-            throws SQLException, Exception {
-        String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'DOCES';";
+                + "Tipo = 'BEBIDAS';";
 
         return executarConsulta(sql);
     }
@@ -151,8 +121,9 @@ public class DaoProduto {
     public static void inserir(Produto pizza)
             throws SQLException, Exception {
 
-        String sql = "INSERT INTO Pizzas (Nome, Descricao, Preco, Ativo, Tipo) "
-                + "VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Pizzas (Nome, Descricao, PrecoBroto,"
+                + " PrecoGrande, PrecoFamilia, Ativo, Tipo) "
+                + "VALUES (?, ?, ?, ?, ?, ?, ?)";
         Connection connection = null;
         PreparedStatement statement = null;
         try {
@@ -161,9 +132,11 @@ public class DaoProduto {
 
             statement.setString(1, pizza.getNome());
             statement.setString(2, pizza.getDescricao());
-            statement.setString(3, pizza.getPreco());
-            statement.setString(4, "SIM");
-            statement.setString(5, pizza.getTipo());
+            statement.setString(3, pizza.getPrecoBroto());
+            statement.setString(4, pizza.getPrecoGrande());
+            statement.setString(5, pizza.getPrecoFamilia());
+            statement.setString(6, "SIM");
+            statement.setString(7, pizza.getTipo());
             System.out.println(statement.toString());
 
             System.out.println("Executando COMANDO SQL: " + sql);
@@ -229,7 +202,9 @@ public class DaoProduto {
         String sql = "UPDATE Pizzas "
                 + "SET Nome = ?, "
                 + "Descricao = ?, "
-                + "Preco = ?, "
+                + "PrecoBroto = ?, "
+                + "PrecoGrande = ?, "
+                + "PrecoFamilia = ?, "
                 + "Tipo = ? "
                 + "WHERE ID = ?;";
 
@@ -241,9 +216,11 @@ public class DaoProduto {
 
             statement.setString(1, pizza.getNome());
             statement.setString(2, pizza.getDescricao());
-            statement.setString(3, pizza.getPreco());
-            statement.setString(4, pizza.getTipo());
-            statement.setInt(5, pizza.getCodigo());
+            statement.setString(3, pizza.getPrecoBroto());
+            statement.setString(4, pizza.getPrecoGrande());
+            statement.setString(5, pizza.getPrecoFamilia());
+            statement.setString(6, pizza.getTipo());
+            statement.setInt(7, pizza.getCodigo());
             System.out.println(statement.toString());
 
             System.out.println("Executando COMANDO SQL: " + sql);

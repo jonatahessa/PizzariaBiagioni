@@ -14,7 +14,9 @@ public class Produto {
     private int codigo;
     private String nome;
     private String descricao;
-    private String preco;
+    private String precoBroto;
+    private String precoGrande;
+    private String precoFamilia;
     private String ativo;
     private String tipo;
 
@@ -42,12 +44,28 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public String getPreco() {
-        return preco;
+    public String getPrecoBroto() {
+        return precoBroto;
     }
 
-    public void setPreco(String preco) {
-        this.preco = preco;
+    public void setPrecoBroto(String precoBroto) {
+        this.precoBroto = precoBroto;
+    }
+
+    public String getPrecoGrande() {
+        return precoGrande;
+    }
+
+    public void setPrecoGrande(String precoGrande) {
+        this.precoGrande = precoGrande;
+    }
+
+    public String getPrecoFamilia() {
+        return precoFamilia;
+    }
+
+    public void setPrecoFamilia(String precoFamilia) {
+        this.precoFamilia = precoFamilia;
     }
 
     public String getAtivo() {

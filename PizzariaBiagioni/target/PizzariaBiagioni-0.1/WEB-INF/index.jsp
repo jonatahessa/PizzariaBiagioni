@@ -63,119 +63,47 @@
             <div class="sessoes bckgrounded" id="sessaocardapio">
               <h1 class="titulos">Cardápio</h1>
               <div class="container-fluid">
-              <div class="menu row">
 
-              <div class="menu-category list-group cardapio">
-                <h2>Bacon</h2>
-                <c:forEach var="bacons" items="${bacon}">
-                  <div class="titulopreco">
-                    <h3>${bacons.nome}</h3>
-                    <p>${bacons.preco}</p>
-                  </div>
-                  <p class="descricao">${bacons.descricao}</p>
-                </c:forEach>
-              </div>
+              <div class="row">
 
-              <div class="menu-category list-group cardapio">
-                <h2>Calabresa</h2>
-                <c:forEach var="calabresas" items="${calabresa}">
-                  <div class="titulopreco">
-                  <h3>${calabresas.nome}</h3>
-                  <p>${calabresas.preco}</p>
-                </div>
-                  <p class="descricao">${calabresas.descricao}</p>
-                </c:forEach>
-              </div>
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input-group">
+                <h3>Tamanho</h3>
+                  <input id="broto" class="radios" type="radio" name="tamanho" value="broto" checked/>
+                  <label for="broto">Broto 4 pedaços</label>
 
-              <div class="menu-category list-group cardapio">
-                <h2>Frango</h2>
-                <c:forEach var="frangos" items="${frango}">
-                  <div class="titulopreco">
-                  <h3>${frangos.nome}</h3>
-                  <p>${frangos.preco}</p>
-                </div>
-                  <p class="descricao">${frangos.descricao}</p>
-                </c:forEach>
-              </div>
+                  <input id="broto-meio" class="radios" type="radio" name="tamanho" value="broto-meio"/>
+                  <label for="broto-meio">Broto 4 pedaços 2 sabores</label>
+                  
+                  <input id="grande" class="radios" type="radio" name="tamanho" value="grande"/>
+                  <label for="grande">Grande 8 pedaços</label>
 
-              <div class="menu-category list-group cardapio">
-                <h2>Lombo</h2>
-                <c:forEach var="lombos" items="${lombo}">
-                  <div class="titulopreco">
-                  <h3>${lombos.nome}</h3>
-                  <p>${lombos.preco}</p>
-                </div>
-                  <p class="descricao">${lombos.descricao}</p>
-                </c:forEach>
-              </div>
+                  <input id="grande-meio" class="radios" type="radio" name="tamanho" value="grande-meio"/>
+                  <label for="grande-meio">Grande 8 pedaços 2 sabores</label>
 
-              <div class="menu-category list-group cardapio">
-                <h2>Vegetais</h2>
-                <c:forEach var="vegeta" items="${vegetais}">
-                  <div class="titulopreco">
-                    <h3>${vegeta.nome}</h3>
-                    <p>${vegeta.preco}</p>
-                  </div>
-                  <p class="descricao">${vegeta.descricao}</p>
-                </c:forEach>
-              </div>
+                  <input id="grande-terco" class="radios" type="radio" name="tamanho" value="grande-terco"/>
+                  <label for="grande-terco">Grande 8 pedaços 3 sabores</label>
 
-              <div class="menu-category list-group cardapio">
-                <h2>Frutos do Mar</h2>
-                <c:forEach var="fruto" items="${frutos}">
-                  <div class="titulopreco">
-                  <h3>${fruto.nome}</h3>
-                  <p>${fruto.preco}</p>
-                </div>
-                  <p class="descricao">${fruto.descricao}</p>
-                </c:forEach>
-              </div>
+                  <input id="familia" class="radios" type="radio" name="tamanho" value="familia"/>
+                  <label for="familia">Familia 12 pedaços</label>
 
-              <div class="menu-category list-group cardapio">
-                <h2>Presunto</h2>
-                <c:forEach var="presuntos" items="${presunto}">
-                  <div class="titulopreco">
-                  <h3>${presuntos.nome}</h3>
-                  <p>${presuntos.preco}</p>
-                </div>
-                  <p class="descricao">${presuntos.descricao}</p>
-                </c:forEach>
-              </div>
+                  <input id="familia-meio" class="radios" type="radio" name="tamanho" value="familia-meio"/>
+                  <label for="familia-meio">Familia 12 pedaços 2 sabores</label>
 
-              <div class="menu-category list-group cardapio">
-                <h2>Queijo</h2>
-                <c:forEach var="queijos" items="${queijo}">
-                  <div class="titulopreco">
-                  <h3>${queijos.nome}</h3>
-                  <p>${queijos.preco}</p>
-                </div>
-                  <p class="descricao">${queijos.descricao}</p>
-                </c:forEach>
-              </div>
-
-              <div class="menu-category list-group cardapio">
-                <h2>Especiais</h2>
-                <c:forEach var="especial" items="${especiais}">
-                  <div class="titulopreco">
-                  <h3>${especial.nome}</h3>
-                  <p>${especial.preco}</p>
-                </div>
-                  <p class="descricao">${especial.descricao}</p>
-                </c:forEach>
-              </div>
-
-              <div class="menu-category list-group cardapio">
-                <h2>Pizzas Doces</h2>
-                <c:forEach var="doce" items="${doces}">
-                  <div class="titulopreco">
-                  <h3>${doce.nome}</h3>
-                  <p>${doce.preco}</p>
-                </div>
-                  <p class="descricao">${doce.descricao}</p>
-                </c:forEach>
+                  <input id="familia-terco" class="radios" type="radio" name="tamanho" value="familia-terco"/>
+                  <label for="familia-terco">Familia 12 pedaços 3 sabores</label>
               </div>
             </div>
-            </div>
+
+                <c:forEach var="pizzas" items="${pizza}">
+                  <div class="titulopreco">
+                    <h3>${pizzas.nome}</h3>
+                    <p class="preco-broto">${pizzas.precoBroto}</p>
+                    <p class="preco-grande">${pizzas.precoGrande}</p>
+                    <p class="preco-familia">${pizzas.precoFamilia}</p>
+                  </div>
+                  <p class="descricao">${pizzas.descricao}</p>
+                </c:forEach>
+              </div>
             </div>
 
             <div class="sessoes bckgrounded" id="sessaolocalizacao">

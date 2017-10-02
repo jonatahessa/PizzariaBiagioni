@@ -46,12 +46,10 @@ public class Adicionar extends HttpServlet {
                 Produto produto = new Produto();
                 produto.setNome(request.getParameter("nome"));
                 produto.setDescricao(request.getParameter("descricao"));
-                produto.setPreco(request.getParameter("preco"));
+                produto.setPrecoBroto(request.getParameter("precoBroto"));
+                produto.setPrecoGrande(request.getParameter("precoGrande"));
+                produto.setPrecoFamilia(request.getParameter("precoFamilia"));
                 produto.setTipo(request.getParameter("tipo"));
-                request.setAttribute("nome", null);
-                request.setAttribute("descricao", null);
-                request.setAttribute("preco", null);
-                request.setAttribute("tipo", null);
 
                 try {
                     Utils.inserirPizza(produto);

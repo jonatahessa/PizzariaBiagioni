@@ -17,197 +17,101 @@ function abrirEditar(form) {
   inputs = [];
   inputs = document.querySelectorAll(".inputseditar");
   var select = document.querySelector("#selecteditar");
-  var optionBacon = document.createElement("option");
-  var optionCalabresa = document.createElement("option");
-  var optionFrango = document.createElement("option");
-  var optionLombo = document.createElement("option");
-  var optionVegetais = document.createElement("option");
-  var optionFrutos = document.createElement("option");
-  var optionPresunto = document.createElement("option");
-  var optionQueijo = document.createElement("option");
-  var optionEspeciais = document.createElement("option");
-  var optionDoces = document.createElement("option");
+  var optionPizza = document.createElement("option");
+  var optionPizzaDoce = document.createElement("option");
+  var optionMassa = document.createElement("option");
+  var optionCombinado = document.createElement("option");
+  var optionSobremesa = document.createElement("option");
+  var optionBebida = document.createElement("option");
   var optionPromo = document.createElement("option");
-  optionBacon.innerHTML = "Bacon";
-  optionBacon.setAttribute("value", "BACON");
-  optionCalabresa.innerHTML = "Calabresa";
-  optionCalabresa.setAttribute("value", "CALABRESA");
-  optionFrango.innerHTML = "Frango";
-  optionFrango.setAttribute("value", "FRANGO");
-  optionLombo.innerHTML = "Lombo";
-  optionLombo.setAttribute("value", "LOMBO");
-  optionVegetais.innerHTML = "Vegetais";
-  optionVegetais.setAttribute("value", "VEGETAIS");
-  optionFrutos.innerHTML = "Frutos";
-  optionFrutos.setAttribute("value", "FRUTOS");
-  optionPresunto.innerHTML = "Presunto";
-  optionPresunto.setAttribute("value", "PRESUNTO");
-  optionQueijo.innerHTML = "Queijo";
-  optionQueijo.setAttribute("value", "QUEIJO");
-  optionEspeciais.innerHTML = "Especiais";
-  optionEspeciais.setAttribute("value", "ESPECIAIS");
-  optionDoces.innerHTML = "Pizzas Doces";
-  optionDoces.setAttribute("value", "DOCES");
+  optionPizza.innerHTML = "Pizza";
+  optionPizza.setAttribute("value", "PIZZA");
+  optionPizzaDoce.innerHTML = "Pizza Doce";
+  optionPizzaDoce.setAttribute("value", "DOCE");
+  optionMassa.innerHTML = "Massa";
+  optionMassa.setAttribute("value", "MASSA");
+  optionCombinado.innerHTML = "Combinado";
+  optionCombinado.setAttribute("value", "COMBINADO");
+  optionSobremesa.innerHTML = "Sobremesa";
+  optionSobremesa.setAttribute("value", "SOBREMESA");
+  optionBebida.innerHTML = "Bebida";
+  optionBebida.setAttribute("value", "BEBIDA");
   optionPromo.innerHTML = "Promoção";
   optionPromo.setAttribute("value", "PROMOCAO");
 
   for (var i = 0; i < inputs.length; i++) {
     inputs[i].value = form[i].value;
   }
-  if (form[4].value == 'BACON') {
-    select.appendChild(optionBacon);
-    select.appendChild(optionCalabresa);
-    select.appendChild(optionFrango);
-    select.appendChild(optionLombo);
-    select.appendChild(optionVegetais);
-    select.appendChild(optionFrutos);
-    select.appendChild(optionPresunto);
-    select.appendChild(optionQueijo);
-    select.appendChild(optionEspeciais);
-    select.appendChild(optionDoces);
+  if (form[6].value == 'PIZZA') {
+    select.appendChild(optionPizza);
+    select.appendChild(optionPizzaDoce);
+    select.appendChild(optionMassa);
+    select.appendChild(optionCombinado);
+    select.appendChild(optionSobremesa);
+    select.appendChild(optionBebida);
     select.appendChild(optionPromo);
 
-  } else if (form[4].value == 'CALABRESA') {
-    select.appendChild(optionCalabresa);
-    select.appendChild(optionBacon);
-    select.appendChild(optionFrango);
-    select.appendChild(optionLombo);
-    select.appendChild(optionVegetais);
-    select.appendChild(optionFrutos);
-    select.appendChild(optionPresunto);
-    select.appendChild(optionQueijo);
-    select.appendChild(optionEspeciais);
-    select.appendChild(optionDoces);
+  } else if (form[6].value == 'DOCE') {
+    select.appendChild(optionPizzaDoce);
+    select.appendChild(optionPizza);
+    select.appendChild(optionMassa);
+    select.appendChild(optionCombinado);
+    select.appendChild(optionSobremesa);
+    select.appendChild(optionBebida);
     select.appendChild(optionPromo);
 
-  } else if (form[4].value == 'FRANGO') {
-    select.appendChild(optionFrango);
-    select.appendChild(optionCalabresa);
-    select.appendChild(optionBacon);
-    select.appendChild(optionLombo);
-    select.appendChild(optionVegetais);
-    select.appendChild(optionFrutos);
-    select.appendChild(optionPresunto);
-    select.appendChild(optionQueijo);
-    select.appendChild(optionEspeciais);
-    select.appendChild(optionDoces);
+  } else if (form[6].value == 'MASSA') {
+    select.appendChild(optionMassa);
+    select.appendChild(optionPizzaDoce);
+    select.appendChild(optionPizza);
+    select.appendChild(optionCombinado);
+    select.appendChild(optionSobremesa);
+    select.appendChild(optionBebida);
     select.appendChild(optionPromo);
 
-  } else if (form[4].value == 'LOMBO') {
-    select.appendChild(optionLombo);
-    select.appendChild(optionFrango);
-    select.appendChild(optionCalabresa);
-    select.appendChild(optionBacon);
-    select.appendChild(optionVegetais);
-    select.appendChild(optionFrutos);
-    select.appendChild(optionPresunto);
-    select.appendChild(optionQueijo);
-    select.appendChild(optionEspeciais);
-    select.appendChild(optionDoces);
+  } else if (form[6].value == 'COMBINADO') {
+    select.appendChild(optionCombinado);
+    select.appendChild(optionMassa);
+    select.appendChild(optionPizzaDoce);
+    select.appendChild(optionPizza);
+    select.appendChild(optionSobremesa);
+    select.appendChild(optionBebida);
     select.appendChild(optionPromo);
 
-  } else if (form[4].value == 'VEGETAIS') {
-    select.appendChild(optionVegetais);
-    select.appendChild(optionLombo);
-    select.appendChild(optionFrango);
-    select.appendChild(optionCalabresa);
-    select.appendChild(optionBacon);
-    select.appendChild(optionFrutos);
-    select.appendChild(optionPresunto);
-    select.appendChild(optionQueijo);
-    select.appendChild(optionEspeciais);
-    select.appendChild(optionDoces);
+  } else if (form[6].value == 'SOBREMESA') {
+    select.appendChild(optionSobremesa);
+    select.appendChild(optionCombinado);
+    select.appendChild(optionMassa);
+    select.appendChild(optionPizzaDoce);
+    select.appendChild(optionPizza);
+    select.appendChild(optionBebida);
     select.appendChild(optionPromo);
 
-  } else if (form[4].value == 'FRUTOS') {
-    select.appendChild(optionFrutos);
-    select.appendChild(optionVegetais);
-    select.appendChild(optionLombo);
-    select.appendChild(optionFrango);
-    select.appendChild(optionCalabresa);
-    select.appendChild(optionBacon);
-    select.appendChild(optionPresunto);
-    select.appendChild(optionQueijo);
-    select.appendChild(optionEspeciais);
-    select.appendChild(optionDoces);
+  } else if (form[6].value == 'BEBIDA') {
+    select.appendChild(optionBebida);
+    select.appendChild(optionSobremesa);
+    select.appendChild(optionCombinado);
+    select.appendChild(optionMassa);
+    select.appendChild(optionPizzaDoce);
+    select.appendChild(optionPizza);
     select.appendChild(optionPromo);
 
-  } else if (form[4].value == 'PRESUNTO') {
-    select.appendChild(optionPresunto);
-    select.appendChild(optionFrutos);
-    select.appendChild(optionVegetais);
-    select.appendChild(optionLombo);
-    select.appendChild(optionFrango);
-    select.appendChild(optionCalabresa);
-    select.appendChild(optionBacon);
-    select.appendChild(optionQueijo);
-    select.appendChild(optionEspeciais);
-    select.appendChild(optionDoces);
+  } else if (form[6].value == 'PROMOCAO') {
     select.appendChild(optionPromo);
-
-  } else if (form[4].value == 'QUEIJO') {
-    select.appendChild(optionQueijo);
-    select.appendChild(optionPresunto);
-    select.appendChild(optionFrutos);
-    select.appendChild(optionVegetais);
-    select.appendChild(optionLombo);
-    select.appendChild(optionFrango);
-    select.appendChild(optionCalabresa);
-    select.appendChild(optionBacon);
-    select.appendChild(optionEspeciais);
-    select.appendChild(optionDoces);
-    select.appendChild(optionPromo);
-
-  } else if (form[4].value == 'ESPECIAIS') {
-    select.appendChild(optionEspeciais);
-    select.appendChild(optionQueijo);
-    select.appendChild(optionPresunto);
-    select.appendChild(optionFrutos);
-    select.appendChild(optionVegetais);
-    select.appendChild(optionLombo);
-    select.appendChild(optionFrango);
-    select.appendChild(optionCalabresa);
-    select.appendChild(optionBacon);
-    select.appendChild(optionDoces);
-    select.appendChild(optionPromo);
-
-  } else if (form[4].value == 'DOCES') {
-    select.appendChild(optionDoces);
-    select.appendChild(optionEspeciais);
-    select.appendChild(optionQueijo);
-    select.appendChild(optionPresunto);
-    select.appendChild(optionFrutos);
-    select.appendChild(optionVegetais);
-    select.appendChild(optionLombo);
-    select.appendChild(optionFrango);
-    select.appendChild(optionCalabresa);
-    select.appendChild(optionBacon);
-    select.appendChild(optionPromo);
-
-  } else if (form[4].value == 'PROMOCAO') {
-    select.appendChild(optionPromo);
-    select.appendChild(optionDoces);
-    select.appendChild(optionEspeciais);
-    select.appendChild(optionQueijo);
-    select.appendChild(optionPresunto);
-    select.appendChild(optionFrutos);
-    select.appendChild(optionVegetais);
-    select.appendChild(optionLombo);
-    select.appendChild(optionFrango);
-    select.appendChild(optionCalabresa);
-    select.appendChild(optionBacon);
+    select.appendChild(optionBebida);
+    select.appendChild(optionSobremesa);
+    select.appendChild(optionCombinado);
+    select.appendChild(optionMassa);
+    select.appendChild(optionPizzaDoce);
+    select.appendChild(optionPizza);
 
   } else {
-    select.appendChild(optionBacon);
-    select.appendChild(optionCalabresa);
-    select.appendChild(optionFrango);
-    select.appendChild(optionLombo);
-    select.appendChild(optionVegetais);
-    select.appendChild(optionFrutos);
-    select.appendChild(optionPresunto);
-    select.appendChild(optionQueijo);
-    select.appendChild(optionEspeciais);
-    select.appendChild(optionDoces);
+    select.appendChild(optionPizza);
+    select.appendChild(optionPizzaDoce);
+    select.appendChild(optionMassa);
+    select.appendChild(optionCombinado);
+    select.appendChild(optionSobremesa);
+    select.appendChild(optionBebida);
     select.appendChild(optionPromo);
   }
 

@@ -4,20 +4,29 @@ html, body {
   margin: 0;
 }
 
+.cabecalho {
+  position: fixed;
+  width: 100%;
+  height: 130px;
+  background-color: white;
+}
+
 #logout {
   float: right;
+  height: 100%;
 }
 
 #logout button {
   border: none;
-  display: block;
-  float: right;
-  margin: auto;
   background-color: transparent;
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 20px;
   color: #bd4745;
+}
+
+#titulo {
+  text-align: center;
 }
 
 #titulo h1 {
@@ -30,7 +39,8 @@ html, body {
 }
 
 #tabelapizzas {
-  width: 60%;
+  padding-top: 140px;
+  width: 90%;
   display: block;
   margin: auto;
 }
@@ -50,41 +60,101 @@ button {
   width: 100px;
 }
 
-#janelanovo {
-  width: 40%;
-  height: 600px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background-color: white;
-  margin: auto;
-  display: none;
-  z-index: 2;
-  animation-name: exibir;
-  animation-duration: 3s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+@media only screen and (max-device-width: 500px) {
+  #janelanovo {
+    width: 80%;
+    height: 700px;
+    position: fixed;
+    left: 0;
+    top: 100px;
+    right: 0;
+    background-color: white;
+    margin: auto;
+    display: none;
+    z-index: 2;
+    animation-name: exibir;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+  }
+
+  #janelaeditar {
+    width: 80%;
+    height: 700px;
+    position: fixed;
+    left: 0;
+    top: 100px;
+    right: 0;
+    background-color: white;
+    margin: auto;
+    display: none;
+    z-index: 2;
+    animation-name: exibir;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+  }
+
+  #cancelanovo {
+    height: 70px;
+    font-size: 40px;
+  }
+
+  #salvanovo {
+    height: 70px;
+    font-size: 40px;
+  }
+
+  #salvaeditar {
+    height: 70px;
+    font-size: 40px;
+  }
+
+  #cancelaeditar {
+    height: 70px;
+    font-size: 40px;
+  }
 }
 
-#janelaeditar {
-  width: 40%;
-  height: 600px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background-color: white;
-  margin: auto;
-  display: none;
-  z-index: 2;
-  animation-name: exibir;
-  animation-duration: 3s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
+@media only screen and (min-device-width: 501px) {
+  #janelanovo {
+    width: 50%;
+    height: 650px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    margin: auto;
+    display: none;
+    z-index: 2;
+    animation-name: exibir;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+  }
+
+  #janelaeditar {
+    width: 50%;
+    height: 650px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    margin: auto;
+    display: none;
+    z-index: 2;
+    animation-name: exibir;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+  }
 }
+
+
 
 @keyframes exibir {
   0% { visibility: hidden; opacity: 0; }
