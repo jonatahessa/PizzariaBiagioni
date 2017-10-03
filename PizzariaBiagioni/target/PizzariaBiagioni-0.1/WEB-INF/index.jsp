@@ -69,40 +69,67 @@
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input-group">
                 <h3>Tamanho</h3>
                   <input id="broto" class="radios" type="radio" name="tamanho" value="broto" checked/>
-                  <label for="broto">Broto 4 pedaços</label>
+                  <label for="broto">Broto 4 pedaços</label> <br>
 
                   <input id="broto-meio" class="radios" type="radio" name="tamanho" value="broto-meio"/>
-                  <label for="broto-meio">Broto 4 pedaços 2 sabores</label>
-                  
+                  <label for="broto-meio">Broto 4 pedaços 2 sabores</label> <br>
+
                   <input id="grande" class="radios" type="radio" name="tamanho" value="grande"/>
-                  <label for="grande">Grande 8 pedaços</label>
+                  <label for="grande">Grande 8 pedaços</label> <br>
 
                   <input id="grande-meio" class="radios" type="radio" name="tamanho" value="grande-meio"/>
-                  <label for="grande-meio">Grande 8 pedaços 2 sabores</label>
+                  <label for="grande-meio">Grande 8 pedaços 2 sabores</label> <br>
 
                   <input id="grande-terco" class="radios" type="radio" name="tamanho" value="grande-terco"/>
-                  <label for="grande-terco">Grande 8 pedaços 3 sabores</label>
+                  <label for="grande-terco">Grande 8 pedaços 3 sabores</label> <br>
 
                   <input id="familia" class="radios" type="radio" name="tamanho" value="familia"/>
-                  <label for="familia">Familia 12 pedaços</label>
+                  <label for="familia">Familia 12 pedaços</label> <br>
 
                   <input id="familia-meio" class="radios" type="radio" name="tamanho" value="familia-meio"/>
-                  <label for="familia-meio">Familia 12 pedaços 2 sabores</label>
+                  <label for="familia-meio">Familia 12 pedaços 2 sabores</label> <br>
 
                   <input id="familia-terco" class="radios" type="radio" name="tamanho" value="familia-terco"/>
-                  <label for="familia-terco">Familia 12 pedaços 3 sabores</label>
+                  <label for="familia-terco">Familia 12 pedaços 3 sabores</label> <br>
               </div>
             </div>
 
-                <c:forEach var="pizzas" items="${pizza}">
-                  <div class="titulopreco">
-                    <h3>${pizzas.nome}</h3>
-                    <p class="preco-broto">${pizzas.precoBroto}</p>
-                    <p class="preco-grande">${pizzas.precoGrande}</p>
-                    <p class="preco-familia">${pizzas.precoFamilia}</p>
-                  </div>
-                  <p class="descricao">${pizzas.descricao}</p>
-                </c:forEach>
+            <div id="pizza-inteira">
+              <c:forEach var="pizzas" items="${pizza}">
+                <div class="titulopreco">
+                  <h3>${pizzas.nome}</h3>
+                  <p class="preco-broto">${pizzas.precoBroto}</p>
+                  <p class="preco-grande">${pizzas.precoGrande}</p>
+                  <p class="preco-familia">${pizzas.precoFamilia}</p>
+                </div>
+                <p class="descricao">${pizzas.descricao}</p>
+              </c:forEach>
+            </div>
+
+            <div id="pizza-meia">
+              <c:forEach var="meia" items="${pizzaMeio}">
+                <div class="titulopreco">
+                  <h3>${meia.nome}</h3>
+                  <p class="preco-broto">${meia.precoBroto}</p>
+                  <p class="preco-grande">${meia.precoGrande}</p>
+                  <p class="preco-familia">${meia.precoFamilia}</p>
+                </div>
+                <p class="descricao">${meia.descricao}</p>
+              </c:forEach>
+            </div>
+
+            <div id="pizza-terco">
+              <c:forEach var="terco" items="${pizzaTerco}">
+                <div class="titulopreco">
+                  <h3>${terco.nome}</h3>
+                  <p class="preco-broto">${terco.precoBroto}</p>
+                  <p class="preco-grande">${terco.precoGrande}</p>
+                  <p class="preco-familia">${terco.precoFamilia}</p>
+                </div>
+                <p class="descricao">${terco.descricao}</p>
+              </c:forEach>
+            </div>
+
               </div>
             </div>
 

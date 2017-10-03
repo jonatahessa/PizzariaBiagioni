@@ -6,6 +6,9 @@
 package br.com.pizzariadomenico.Process;
 
 import java.io.UnsupportedEncodingException;
+import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
@@ -37,7 +40,7 @@ public class Utils {
 
         return pizzas;
     }
-    
+
     public static List<Produto> ListarPizzasPaginaInicialMassas() throws Exception {
         List<Produto> pizzas = new ArrayList<>();
         pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialMassas();
@@ -51,20 +54,21 @@ public class Utils {
 
         return pizzas;
     }
-    
+
     public static List<Produto> ListarPizzasPaginaInicialSobremesas() throws Exception {
         List<Produto> pizzas = new ArrayList<>();
         pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialSobremesas();
 
         return pizzas;
     }
+
     public static List<Produto> ListarPizzasPaginaInicialBebidas() throws Exception {
         List<Produto> pizzas = new ArrayList<>();
         pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialBebidas();
 
         return pizzas;
     }
-    
+
     public static List<Produto> ListarPizzasPaginaInicialPromocoes() throws Exception {
         List<Produto> pizzas = new ArrayList<>();
         pizzas = br.com.pizzariadomenico.Daos.DaoProduto.listarPaginaInicialPromocoes();
@@ -86,6 +90,47 @@ public class Utils {
 
     public static void alterar(Produto pizza) throws Exception {
         br.com.pizzariadomenico.Daos.DaoProduto.alterar(pizza);
+    }
+
+    public static List<Produto> pizzasMeio(List<Produto> pizzas) {
+        for (Produto p : pizzas) {
+            p.setPrecoBroto(calculaMeio(p.getPrecoBroto()));
+            p.setPrecoGrande(calculaMeio(p.getPrecoGrande()));
+            p.setPrecoFamilia(calculaMeio(p.getPrecoFamilia()));
+        }
+
+        return pizzas;
+    }
+
+    public static String calculaMeio(String preco) {
+        if (preco != null) {
+            BigDecimal v = new BigDecimal(preco.replace(',', '.'));
+
+            return v.divide(new BigDecimal("2"), MathContext.DECIMAL128).toString().replace('.', ',');
+        }
+        return null;
+    }
+
+    public static List<Produto> pizzasTerco(List<Produto> pizzas) {
+        for (Produto p : pizzas) {
+            p.setPrecoBroto(calculaTerco(p.getPrecoBroto()));
+            p.setPrecoGrande(calculaTerco(p.getPrecoGrande()));
+            p.setPrecoFamilia(calculaTerco(p.getPrecoFamilia()));
+        }
+
+        return pizzas;
+    }
+
+    public static String calculaTerco(String preco) {
+        if (preco != null) {
+            BigDecimal v = new BigDecimal(preco.replace(',', '.'));
+            BigDecimal v2 = v.divide(new BigDecimal("3"), RoundingMode.HALF_UP);
+
+            return v2.toString().replace('.', ',');
+            
+            
+        }
+        return null;
     }
 
     public static String criptografia(String password) throws NoSuchAlgorithmException,

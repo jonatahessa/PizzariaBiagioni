@@ -198,6 +198,14 @@ section {
 #sessaocardapio {
 }
 
+#pizza-meia {
+  display: none;
+}
+
+#pizza-terco {
+  display: none;
+}
+
 .preco-broto {
   float: right;
 }
