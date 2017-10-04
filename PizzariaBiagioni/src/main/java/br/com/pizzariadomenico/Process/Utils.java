@@ -124,7 +124,7 @@ public class Utils {
     public static String calculaTerco(String preco) {
         if (preco != null) {
             BigDecimal v = new BigDecimal(preco.replace(',', '.'));
-            BigDecimal v2 = v.divide(new BigDecimal("3"), RoundingMode.HALF_UP);
+            BigDecimal v2 = v.divide(new BigDecimal("3"), RoundingMode.DOWN);
 
             return v2.toString().replace('.', ',');
             

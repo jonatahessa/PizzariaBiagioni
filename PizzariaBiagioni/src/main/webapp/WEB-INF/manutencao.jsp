@@ -35,11 +35,6 @@
           </div>
           </div>
 
-
-
-
-
-
             <div id="pizzas">
 
                 <table class="table table-striped" id="tabelapizzas">

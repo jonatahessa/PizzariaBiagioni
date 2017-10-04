@@ -4,16 +4,8 @@ html, body {
   margin: 0;
 }
 
-.cabecalho {
-  position: fixed;
-  width: 100%;
-  height: 130px;
-  background-color: white;
-}
-
 #logout {
   float: right;
-  height: 100%;
 }
 
 #logout button {
@@ -25,136 +17,153 @@ html, body {
   color: #bd4745;
 }
 
+#divnovo {
+  float: right;
+}
+
+.novo-logout {
+  display: inline;
+  float: right;
+}
+
+.cabecalho {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 150px;
+}
+
 #titulo {
-  text-align: center;
+  margin: auto;
+  float: none;
 }
 
 #titulo h1 {
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
   font-size: 40px;
 }
 
 #pizzas {
   width: 100%;
+  padding-top: 160px;
 }
 
 #tabelapizzas {
-  padding-top: 140px;
-  width: 90%;
-  display: block;
+  width: 80%;
   margin: auto;
+  float: none;
 }
 
 #divnovo {
-  width: 60%;
-  height: 50px;
-  display: block;
-  margin: auto;
+  display: inline;
 }
 
 #novo {
-  float: right;
 }
 
 button {
   width: 100px;
 }
 
-@media only screen and (max-device-width: 500px) {
-  #janelanovo {
-    width: 80%;
-    height: 700px;
-    position: fixed;
-    left: 0;
-    top: 100px;
-    right: 0;
-    background-color: white;
-    margin: auto;
-    display: none;
-    z-index: 2;
-    animation-name: exibir;
-    animation-duration: 3s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-  }
+@media only screen and (max-device-width: 900px) {
 
-  #janelaeditar {
-    width: 80%;
-    height: 700px;
-    position: fixed;
-    left: 0;
-    top: 100px;
-    right: 0;
-    background-color: white;
-    margin: auto;
-    display: none;
-    z-index: 2;
-    animation-name: exibir;
-    animation-duration: 3s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-  }
-
-  #cancelanovo {
-    height: 70px;
-    font-size: 40px;
-  }
-
-  #salvanovo {
-    height: 70px;
-    font-size: 40px;
-  }
-
-  #salvaeditar {
-    height: 70px;
-    font-size: 40px;
-  }
-
-  #cancelaeditar {
-    height: 70px;
-    font-size: 40px;
-  }
+#janelanovo {
+  width: 70%;
+  height: 700px;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  right: 0;
+  background-color: white;
+  margin: auto;
+  display: none;
+  z-index: 2;
+  animation-name: exibir;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 
-@media only screen and (min-device-width: 501px) {
-  #janelanovo {
-    width: 50%;
-    height: 650px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background-color: white;
-    margin: auto;
-    display: none;
-    z-index: 2;
-    animation-name: exibir;
-    animation-duration: 3s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-  }
-
-  #janelaeditar {
-    width: 50%;
-    height: 650px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background-color: white;
-    margin: auto;
-    display: none;
-    z-index: 2;
-    animation-name: exibir;
-    animation-duration: 3s;
-    animation-fill-mode: both;
-    animation-timing-function: ease-in-out;
-  }
+#janelaeditar {
+  width: 70%;
+  height: 700px;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  right: 0;
+  background-color: white;
+  margin: auto;
+  display: none;
+  z-index: 2;
+  animation-name: exibir;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 
+#botoesnovo button {
+  height: 75px;
+  font-size: 40px;
+  display: inline;
+  width: 49%;
+}
 
+#botoeseditar button {
+  height: 75px;
+  font-size: 40px;
+  display: inline;
+  width: 49%;
+}
+}
+
+@media only screen and (min-device-width: 901px) {
+
+#janelanovo {
+  width: 40%;
+  height: 700px;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  right: 0;
+  background-color: white;
+  margin: auto;
+  display: none;
+  z-index: 2;
+  animation-name: exibir;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+#janelaeditar {
+  width: 40%;
+  height: 700px;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  right: 0;
+  background-color: white;
+  margin: auto;
+  display: none;
+  z-index: 2;
+  animation-name: exibir;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+#botoesnovo button {
+  display: inline;
+  width: 49%;
+}
+
+#botoeseditar button {
+  display: inline;
+  width: 49%;
+}
+}
 
 @keyframes exibir {
   0% { visibility: hidden; opacity: 0; }
@@ -231,14 +240,4 @@ button {
   width: 80%;
   padding-top: 5%;
   margin: auto;
-}
-
-#botoesnovo button {
-  display: inline;
-  width: 49%;
-}
-
-#botoeseditar button {
-  display: inline;
-  width: 49%;
 }

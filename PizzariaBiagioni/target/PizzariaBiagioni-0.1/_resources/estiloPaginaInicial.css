@@ -195,7 +195,20 @@ section {
     margin-top: 2%;
 }
 
+.escolha-pizzas h3 {
+  font-weight: bold;
+}
+
+.escolha-pizzas label {
+    font-size: 25px;
+    margin-top: 3%;
+}
+
 #sessaocardapio {
+}
+
+#sessaointerativa {
+  margin-top: 5%;
 }
 
 #pizza-meia {
@@ -218,6 +231,27 @@ section {
 .preco-familia {
   float: right;
   display: none;
+}
+
+.titulopreco {
+  border-bottom: 1px dotted gray;
+}
+
+.titulopreco h3 {
+  font-size: 30px;
+  width: 50%;
+  margin: 0;
+  display: inline;
+  color: green;
+}
+
+.precos {
+  font-size: 30px;
+  color: red;
+}
+
+.descricao {
+  font-size: 20px;
 }
 
 
