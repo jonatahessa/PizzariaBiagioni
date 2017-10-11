@@ -105,7 +105,7 @@ public class DaoProduto {
     public static List<Produto> listarPaginaInicialBebidas()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'BEBIDAS';";
+                + "Tipo = 'BEBIDA';";
 
         return executarConsulta(sql);
     }

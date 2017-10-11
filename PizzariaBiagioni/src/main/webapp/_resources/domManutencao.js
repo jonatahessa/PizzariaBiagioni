@@ -1,11 +1,9 @@
 function main() {
-  var btnNovo = document.querySelector("#novo");
-  var cancelaNovo = document.querySelector("#cancelanovo");
-  var cancelaEditar = document.querySelector("#cancelaeditar");
-
-  cancelaEditar.addEventListener("click", editarCancela);
-  btnNovo.addEventListener("click", abrirNovo);
-  cancelaNovo.addEventListener("click", novoCancela);
+  document.querySelector("#select-tipo").addEventListener("change", hidePrecos);
+  document.querySelector("#novo").addEventListener("click", abrirNovo);
+  document.querySelector("#cancelanovo").addEventListener("click", novoCancela);
+  document.querySelector("#cancelaeditar")
+      .addEventListener("click", editarCancela);
 }
 
 function abrirNovo() {
@@ -138,6 +136,17 @@ function editarCancela() {
   }
   document.querySelector("#nevoa").style.display = "none";
   document.querySelector("#janelaeditar").style.display = "none";
+}
+
+function hidePrecos() {
+  if (document.querySelector("#select-tipo").value != 'PIZZA' &&
+      document.querySelector("#select-tipo").value != 'DOCE') {
+    document.querySelector("#grande").style.display = 'none';
+    document.querySelector("#familia").style.display = 'none';
+  } else {
+    document.querySelector("#grande").style.display = 'block';
+    document.querySelector("#familia").style.display = 'block';
+  }
 }
 
 window.addEventListener("load", main);

@@ -29,8 +29,6 @@ public class GetSabores extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         List<Produto> pizza = Utils.ListarPizzasPaginaInicialPizzas();
-        List<Produto> pizzaMeio = Utils.pizzasMeio(Utils.ListarPizzasPaginaInicialPizzas());
-        List<Produto> pizzaTerco = Utils.pizzasTerco(Utils.ListarPizzasPaginaInicialPizzas());
         List<Produto> pizzaDoce = Utils.ListarPizzasPaginaInicialPizzasDoces();
         List<Produto> massa = Utils.ListarPizzasPaginaInicialMassas();
         List<Produto> combinado = Utils.ListarPizzasPaginaInicialCombinados();
@@ -38,8 +36,6 @@ public class GetSabores extends HttpServlet {
         List<Produto> bebida = Utils.ListarPizzasPaginaInicialBebidas();
         List<Produto> promo = Utils.ListarPizzasPaginaInicialPromocoes();
         request.setAttribute("pizza", pizza);
-        request.setAttribute("pizzaMeio", pizzaMeio);
-        request.setAttribute("pizzaTerco", pizzaTerco);
         request.setAttribute("pizzaDoce", pizzaDoce);
         request.setAttribute("massa", massa);
         request.setAttribute("combinado", combinado);

@@ -97,6 +97,19 @@
                     <h2>Novo</h2>
                 </div>
 
+                <div id="tipo" class="form-group camposform">
+                    <label for="tipo">Tipo</label>
+                    <select id="select-tipo" class="form-control" name="tipo">
+                        <option value="PIZZA">Pizza</option>
+                        <option value="DOCE">Pizza Doce</option>
+                        <option value="MASSA">Massa</option>
+                        <option value="COMBINADO">Combinado</option>
+                        <option value="SOBREMESA">Sobremesa</option>
+                        <option value="BEBIDA">Bebida</option>
+                        <option value="PROMOCAO">Promoção</option>
+                    </select>
+                </div>
+
                 <div id="nome" class="form-group camposform">
                     <label for="nome">Nome</label>
                     <input class="form-control inputsnovo" type="text" name="nome"/>
@@ -120,19 +133,6 @@
                 <div id="familia" class="form-group camposform">
                     <label for="familia">Familia</label>
                     <input class="form-control inputsnovo" type="text" name="precoFamilia"/>
-                </div>
-
-                <div id="tipo" class="form-group camposform">
-                    <label for="tipo">Tipo</label>
-                    <select class="form-control" name="tipo">
-                        <option value="PIZZA">Pizza</option>
-                        <option value="DOCE">Pizza Doce</option>
-                        <option value="MASSA">Massa</option>
-                        <option value="COMBINADO">Combinado</option>
-                        <option value="SOBREMESA">Sobremesa</option>
-                        <option value="BEBIDA">Bebida</option>
-                        <option value="PROMOCAO">Promoção</option>
-                    </select>
                 </div>
 
                 <div id="botoesnovo">
