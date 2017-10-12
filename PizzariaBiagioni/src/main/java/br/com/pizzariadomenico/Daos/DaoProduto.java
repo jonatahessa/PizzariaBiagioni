@@ -65,7 +65,7 @@ public class DaoProduto {
     public static List<Produto> listarPaginaInicialPizzas()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'PIZZA';";
+                + "Tipo = 'PIZZA' ORDER BY Nome;";
 
         return executarConsulta(sql);
     }
@@ -73,7 +73,7 @@ public class DaoProduto {
     public static List<Produto> listarPaginaInicialMassas()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'MASSA';";
+                + "Tipo = 'MASSA' ORDER BY Nome;";
 
         return executarConsulta(sql);
     }
@@ -81,7 +81,7 @@ public class DaoProduto {
     public static List<Produto> listarPaginaInicialCombinados()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'COMBINADO';";
+                + "Tipo = 'COMBINADO' ORDER BY Nome;";
 
         return executarConsulta(sql);
     }
@@ -89,7 +89,7 @@ public class DaoProduto {
     public static List<Produto> listarPaginaInicialSobremesas()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'SOBREMESA';";
+                + "Tipo = 'SOBREMESA' ORDER BY Nome;";
 
         return executarConsulta(sql);
     }
@@ -97,7 +97,7 @@ public class DaoProduto {
     public static List<Produto> listarPaginaInicialPizzasDoces()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'DOCE';";
+                + "Tipo = 'DOCE' ORDER BY Nome;";
 
         return executarConsulta(sql);
     }
@@ -105,7 +105,7 @@ public class DaoProduto {
     public static List<Produto> listarPaginaInicialBebidas()
             throws SQLException, Exception {
         String sql = "SELECT * FROM Pizzas WHERE Ativo = 'SIM' AND "
-                + "Tipo = 'BEBIDA';";
+                + "Tipo = 'BEBIDA' ORDER BY Nome;";
 
         return executarConsulta(sql);
     }

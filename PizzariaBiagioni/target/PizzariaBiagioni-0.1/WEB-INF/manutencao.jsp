@@ -121,18 +121,18 @@
                 </div>
 
                 <div id="broto" class="form-group camposform">
-                    <label for="broto">Broto</label>
+                    <label id="broto-novo" for="broto">Broto</label>
                     <input class="form-control inputsnovo" type="text" name="precoBroto"/>
                 </div>
 
                 <div id="grande" class="form-group camposform">
                     <label for="grande">Grande</label>
-                    <input class="form-control inputsnovo" type="text" name="precoGrande"/>
+                    <input id="input-grande" class="form-control inputsnovo" type="text" name="precoGrande"/>
                 </div>
 
                 <div id="familia" class="form-group camposform">
                     <label for="familia">Familia</label>
-                    <input class="form-control inputsnovo" type="text" name="precoFamilia"/>
+                    <input id="input-familia" class="form-control inputsnovo" type="text" name="precoFamilia"/>
                 </div>
 
                 <div id="botoesnovo">
@@ -154,6 +154,13 @@
                     <input class="form-control inputseditar" type="hidden" name="codigo"/>
                 </div>
 
+                <div id="tipoeditar" class="form-group camposform">
+                    <label for="tipo">Tipo</label>
+                    <select id="select-editar" class="form-control" name="tipo">
+
+                    </select>
+                </div>
+
                 <div id="nomeeditar" class="form-group camposform">
                     <label for="nome">Nome</label>
                     <input class="form-control inputseditar" type="text" name="nome"/>
@@ -164,26 +171,19 @@
                     <textarea class="form-control inputseditar" rows="3" name="descricao"></textarea>
                 </div>
 
-                <div id="broto" class="form-group camposform">
-                    <label for="broto">Broto</label>
+                <div id="brotoeditar" class="form-group camposform">
+                    <label id="broto-editar" for="broto">Broto</label>
                     <input class="form-control inputseditar" type="text" name="precoBrotoEditar"/>
                 </div>
 
-                <div id="grande" class="form-group camposform">
+                <div id="grandeeditar" class="form-group camposform">
                     <label for="grande">Grande</label>
-                    <input class="form-control inputseditar" type="text" name="precoGrandeEditar"/>
+                    <input id="input-grande-editar" class="form-control inputseditar" type="text" name="precoGrandeEditar"/>
                 </div>
 
-                <div id="familia" class="form-group camposform">
+                <div id="familiaeditar" class="form-group camposform">
                     <label for="familia">Familia</label>
-                    <input class="form-control inputseditar" type="text" name="precoFamiliaEditar"/>
-                </div>
-
-                <div id="tipoeditar" class="form-group camposform">
-                    <label for="tipo">Tipo</label>
-                    <select id="selecteditar" class="form-control" name="tipo">
-
-                    </select>
+                    <input id="input-familia-editar" class="form-control inputseditar" type="text" name="precoFamiliaEditar"/>
                 </div>
 
                 <div id="botoeseditar">

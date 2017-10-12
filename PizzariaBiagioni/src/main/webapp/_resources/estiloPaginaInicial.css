@@ -58,6 +58,36 @@ section {
     color: #6D6D6D;
 }
 
+#info {
+  margin: 0;
+  padding-top: 80px;
+  padding-bottom: 15px;
+  width: 100%;
+  background-color: black;
+  opacity: 0.9;
+}
+
+#info h1 {
+  margin-left: 3%;
+  font-size: 40px;
+  color: #ebebeb;
+  font-family: 'Courgette', cursive;
+}
+
+#info h2 {
+  text-align: center;
+  font-size: 35px;
+}
+
+#info a {
+  color: #ebebeb;
+  font-family: 'Courgette', cursive;
+}
+
+#info img {
+  width: 30px;
+}
+
 /**#firstimg {
   width: 100%;
   height: 85%;
@@ -66,9 +96,8 @@ section {
   background-image: url(../_imagens/img1.jpg);
 }**/
 
-#firstimg img {
+.imgs-carousel {
     width: 100%;
-    margin-top: 80px;
 }
 
 #firstimg h1 {

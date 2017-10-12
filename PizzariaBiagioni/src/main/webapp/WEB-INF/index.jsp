@@ -29,36 +29,83 @@
                     <li><button type="button" id="buttoncontato">Contato</button></li>
                     <li><button type="button" id="buttonlocalizacao">Localização</button></li>
                     <li><button type="button" id="buttoncardapio">Cardápio</button></li>
-                    <li><button type="button" id="buttonpromocoes">Promoções</button></li>
-                    <li><button type="button" id="buttonnossacasa">Nossa Casa</button></li>
+                        <c:if test="${promocoes != null}">
+                        <li><button type="button" id="buttonpromocoes">Promoções</button></li>
+                        </c:if>
+                    <li><button type="button" id="buttonnossacasa">A Biagioni</button></li>
                     <li><button type="button" id="buttonhome">Home</button></li>
                 </ul>
             </div>
 
-            <div id="firstimg">
-                <img src="_imagens/logo.JPG" alt="Logo da pizzaria">
+            <div id="info">
+                <h1>Pizzas e Massas Biagioni</h1>
+                <h2><a href="tel:01128251552">2825-1552 -</a>
+                    <a href="tel:01145059866">4505-9866 -</a>
+                    <a href="tel:011995937704">99593-7704 </a><img src="_imagens/whatsapp.png"></h2>
+            </div>
+
+            <div id="carousel-example-generic" class="carousel slide carrossel" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img class="imgs-carousel" src="_imagens/carousel1.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="imgs-carousel" src="_imagens/carousel2.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img class="imgs-carousel" src="_imagens/carousel3.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
 
             <div class="sessoes bckgrounded" id="nossacasa">
-                <h1 class="titulos">Nossa Casa</h1>
+                <h1 class="titulos">A Biagioni</h1>
                 <div id="fachada">
                     <img src="_imagens/FachadaPizzaria.jpg">
                 </div>
-                <p>Em 1999, Carlos de Toledo Domenico criou a PIZZARIA DOMENICO, unindo a tradição da pizza com a sofisticação informal. E não parou de crescer, evoluir, adotando o lema: “Atender à expectativa dos clientes” como sinônimo de qualidade.</p>
-                <p>A localização tornou-se privilegiada: Haddock Lobo X Alameda Tietê, a porta de entrada dos Jardins. O investimento constante nas instalações, produtos e serviços, faz com que a DOMENICO seja considerada um dos clássicos, na terra das pizzarias.</p>
-                <p>Todos os recursos são colocados à disposição dos funcionários, para que a filosofia desde a fundação continue: SERVIR PIZZAS COM DEDICAÇÃO, CONHECIMENTO E ALEGRIA.</p>
+                <p>Sendo a melhor opção da Vila Mascote a BIAGIONI juntou a tradição da pizza com a sofisticação informal. Adotando sempre o lema: “Atender bem para atender sempre” como sinônimo de qualidade.</p>
+                <p>Com uma localização privilegiada: na Avenida Damasceno Vieira, uma das principais artérias comerciais da Vila Mascote. Com investimento constante nas instalações, produtos e serviços, faz com que a BIAGIONI seja considerada um clássico de São Paulo, terra das pizzarias.</p>
+                <p>Todos os recursos são colocados à disposição dos funcionários, para que a filosofia desde a fundação continue: SERVIR PIZZAS COM DEDICAÇÃO, CARINHO E ALEGRIA.</p>
             </div>
 
-            <div class="sessoes bckgrounded" id="sessaopromocoes">
-                <h1 class="titulos">Promoções</h1>
-                <c:forEach var="promo" items="${promocoes}">
-                    <div class="paineispromo">
-                        <h3>${promo.nome}</h3>
-                        <p>${promo.descricao}</p>
-                        <p>${promo.preco}</p>
-                    </div>
-                </c:forEach>
-            </div>
+            <c:if test="${promocoes != null}">
+                <div class="sessoes bckgrounded" id="sessaopromocoes">
+                    <h1 class="titulos">Promoções</h1>
+                    <c:forEach var="promo" items="${promocoes}">
+                        <div class="paineispromo">
+                            <h3>${promo.nome}</h3>
+                            <p>${promo.descricao}</p>
+                            <p>${promo.precoBroto}</p>
+                        </div>
+                    </c:forEach>
+                </div>
+            </c:if>
 
             <div class="sessoes bckgrounded" id="sessaocardapio">
                 <h1 class="titulos">Cardápio</h1>
@@ -93,57 +140,57 @@
 
                     <div id="sessaointerativa">
 
-                      <div id="pizza-inteira">
-                          <c:forEach var="pizzas" items="${pizza}">
-                              <div class="titulopreco">
-                                  <h3>${pizzas.nome}</h3>
-                                  <p class="preco-broto precos">${pizzas.precoBroto}</p>
-                                  <p class="preco-grande precos">${pizzas.precoGrande}</p>
-                                  <p class="preco-familia precos">${pizzas.precoFamilia}</p>
-                              </div>
-                              <p class="descricao">${pizzas.descricao}</p>
-                          </c:forEach>
-                      </div>
+                        <div id="pizza-inteira">
+                            <c:forEach var="pizzas" items="${pizza}">
+                                <div class="titulopreco">
+                                    <h3>${pizzas.nome}</h3>
+                                    <p class="preco-broto precos">${pizzas.precoBroto}</p>
+                                    <p class="preco-grande precos">${pizzas.precoGrande}</p>
+                                    <p class="preco-familia precos">${pizzas.precoFamilia}</p>
+                                </div>
+                                <p class="descricao">${pizzas.descricao}</p>
+                            </c:forEach>
+                        </div>
 
-                      <div id="massas">
-                          <c:forEach var="massas" items="${massa}">
-                              <div class="titulopreco">
-                                  <h3>${massas.nome}</h3>
-                                  <p class="preco-massa precos">${massas.precoBroto}</p>
-                              </div>
-                              <p class="descricao">${massas.descricao}</p>
-                          </c:forEach>
-                      </div>
+                        <div id="massas">
+                            <c:forEach var="massas" items="${massa}">
+                                <div class="titulopreco">
+                                    <h3>${massas.nome}</h3>
+                                    <p class="preco-massa precos">${massas.precoBroto}</p>
+                                </div>
+                                <p class="descricao">${massas.descricao}</p>
+                            </c:forEach>
+                        </div>
 
-                      <div id="combinados">
-                          <c:forEach var="combinados" items="${combinado}">
-                              <div class="titulopreco">
-                                  <h3>${combinados.nome}</h3>
-                                  <p class="preco-combinado precos">${combinados.precoBroto}</p>
-                              </div>
-                              <p class="descricao">${combinados.descricao}</p>
-                          </c:forEach>
-                      </div>
+                        <div id="combinados">
+                            <c:forEach var="combinados" items="${combinado}">
+                                <div class="titulopreco">
+                                    <h3>${combinados.nome}</h3>
+                                    <p class="preco-combinado precos">${combinados.precoBroto}</p>
+                                </div>
+                                <p class="descricao">${combinados.descricao}</p>
+                            </c:forEach>
+                        </div>
 
-                      <div id="sobremesas">
-                          <c:forEach var="sobremesas" items="${sobremesa}">
-                              <div class="titulopreco">
-                                  <h3>${sobremesas.nome}</h3>
-                                  <p class="preco-bebida precos">${sobremesas.precoBroto}</p>
-                              </div>
-                              <p class="descricao">${sobremesas.descricao}</p>
-                          </c:forEach>
-                      </div>
+                        <div id="sobremesas">
+                            <c:forEach var="sobremesas" items="${sobremesa}">
+                                <div class="titulopreco">
+                                    <h3>${sobremesas.nome}</h3>
+                                    <p class="preco-bebida precos">${sobremesas.precoBroto}</p>
+                                </div>
+                                <p class="descricao">${sobremesas.descricao}</p>
+                            </c:forEach>
+                        </div>
 
-                      <div id="bebidas">
-                          <c:forEach var="bebidas" items="${bebida}">
-                              <div class="titulopreco">
-                                  <h3>${bebidas.nome}</h3>
-                                  <p class="preco-bebida precos">${bebidas.precoBroto}</p>
-                              </div>
-                              <p class="descricao">${bebidas.descricao}</p>
-                          </c:forEach>
-                      </div>
+                        <div id="bebidas">
+                            <c:forEach var="bebidas" items="${bebida}">
+                                <div class="titulopreco">
+                                    <h3>${bebidas.nome}</h3>
+                                    <p class="preco-bebida precos">${bebidas.precoBroto}</p>
+                                </div>
+                                <p class="descricao">${bebidas.descricao}</p>
+                            </c:forEach>
+                        </div>
                     </div>
                 </div>
             </div>

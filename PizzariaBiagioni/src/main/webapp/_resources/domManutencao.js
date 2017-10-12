@@ -1,9 +1,9 @@
 function main() {
   document.querySelector("#select-tipo").addEventListener("change", hidePrecos);
+  document.querySelector("#select-editar").addEventListener("change", hidePrecosEditar);
   document.querySelector("#novo").addEventListener("click", abrirNovo);
   document.querySelector("#cancelanovo").addEventListener("click", novoCancela);
-  document.querySelector("#cancelaeditar")
-      .addEventListener("click", editarCancela);
+  document.querySelector("#cancelaeditar").addEventListener("click", editarCancela);
 }
 
 function abrirNovo() {
@@ -14,7 +14,7 @@ function abrirNovo() {
 function abrirEditar(form) {
   inputs = [];
   inputs = document.querySelectorAll(".inputseditar");
-  var select = document.querySelector("#selecteditar");
+  var select = document.querySelector("#select-editar");
   var optionPizza = document.createElement("option");
   var optionPizzaDoce = document.createElement("option");
   var optionMassa = document.createElement("option");
@@ -116,6 +116,9 @@ function abrirEditar(form) {
   document.querySelector("#nevoa").style.display = "block";
   document.querySelector("#janelaeditar").style.display = "block";
 
+  hidePrecos();
+  hidePrecosEditar();
+
   return false;
 }
 
@@ -130,7 +133,7 @@ function novoCancela() {
 }
 
 function editarCancela() {
-  var myNode = document.getElementById("selecteditar");
+  var myNode = document.getElementById("select-editar");
   while (myNode.firstChild) {
     myNode.removeChild(myNode.firstChild);
   }
@@ -139,13 +142,30 @@ function editarCancela() {
 }
 
 function hidePrecos() {
-  if (document.querySelector("#select-tipo").value != 'PIZZA' &&
-      document.querySelector("#select-tipo").value != 'DOCE') {
+  if (document.querySelector("#select-tipo").value != 'PIZZA') {
     document.querySelector("#grande").style.display = 'none';
     document.querySelector("#familia").style.display = 'none';
+    document.querySelector("#input-grande").value = '';
+    document.querySelector("#input-familia").value = '';
+    document.querySelector("#broto-novo").innerHTML = "Preço";
   } else {
     document.querySelector("#grande").style.display = 'block';
     document.querySelector("#familia").style.display = 'block';
+    document.querySelector("#broto-novo").innerHTML = "Broto";
+  }
+}
+
+function hidePrecosEditar() {
+  if (document.querySelector("#select-editar").value != 'PIZZA') {
+    document.querySelector("#grandeeditar").style.display = 'none';
+    document.querySelector("#familiaeditar").style.display = 'none';
+    document.querySelector("#input-grande-editar").value = '';
+    document.querySelector("#input-familia-editar").value = '';
+    document.querySelector("#broto-editar").innerHTML = "Preço";
+  } else {
+    document.querySelector("#grandeeditar").style.display = 'block';
+    document.querySelector("#familiaeditar").style.display = 'block';
+    document.querySelector("#broto-editar").innerHTML = "Broto";
   }
 }
 

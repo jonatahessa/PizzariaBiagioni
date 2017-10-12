@@ -10,7 +10,9 @@ function main() {
   document.querySelector("#buttoncardapio").addEventListener("click", cardapio);
   document.querySelector("#buttonnossacasa").addEventListener("click", nossacasa);
   document.querySelector("#buttonhome").addEventListener("click", home);
-  document.querySelector("#buttonpromocoes").addEventListener("click", promocao);
+  if (document.querySelector("#buttonpromocoes") != null) {
+    document.querySelector("#buttonpromocoes").addEventListener("click", promocao);
+  }
   document.querySelector("#buttonlocalizacao").addEventListener("click", localizacao);
   document.querySelector("#buttoncontato").addEventListener("click", scrollcontato);
 }
