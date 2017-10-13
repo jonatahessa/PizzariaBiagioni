@@ -142,7 +142,8 @@ function editarCancela() {
 }
 
 function hidePrecos() {
-  if (document.querySelector("#select-tipo").value != 'PIZZA') {
+  if (document.querySelector("#select-tipo").value != 'PIZZA' &&
+  document.querySelector("#select-tipo").value != 'DOCE') {
     document.querySelector("#grande").style.display = 'none';
     document.querySelector("#familia").style.display = 'none';
     document.querySelector("#input-grande").value = '';
@@ -156,7 +157,8 @@ function hidePrecos() {
 }
 
 function hidePrecosEditar() {
-  if (document.querySelector("#select-editar").value != 'PIZZA') {
+  if (document.querySelector("#select-editar").value != 'PIZZA' &&
+  document.querySelector("#select-editar").value != 'DOCE') {
     document.querySelector("#grandeeditar").style.display = 'none';
     document.querySelector("#familiaeditar").style.display = 'none';
     document.querySelector("#input-grande-editar").value = '';

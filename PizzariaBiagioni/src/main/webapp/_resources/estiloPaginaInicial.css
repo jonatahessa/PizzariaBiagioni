@@ -225,7 +225,6 @@ section {
 }
 
 .escolha-pizzas h3 {
-  font-weight: bold;
 }
 
 .escolha-pizzas label {
@@ -234,13 +233,26 @@ section {
 }
 
 #sessaocardapio {
+
 }
 
 #sessaointerativa {
   margin-top: 5%;
 }
 
+#pizza-inteira {
+  display: none;
+}
+
+#pizza-inteira-doce {
+  display: none;
+}
+
 #massas {
+  display: none;
+}
+
+#combinados {
   display: none;
 }
 
@@ -249,6 +261,14 @@ section {
 }
 
 #pizza-terco {
+  display: none;
+}
+
+#sobremesas {
+  display: none;
+}
+
+#bebidas {
   display: none;
 }
 

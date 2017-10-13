@@ -115,7 +115,7 @@
 
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input-group escolha-pizzas">
 
-                            <input id="broto" class="radios" type="radio" name="tamanho" value="broto" checked/>
+                            <input id="broto" class="radios" type="radio" name="tamanho" value="broto"/>
                             <label for="broto"> Broto 4 pedaços</label> <br>
 
                             <input id="grande" class="radios" type="radio" name="tamanho" value="grande"/>
@@ -124,23 +124,7 @@
                             <input id="familia" class="radios" type="radio" name="tamanho" value="familia"/>
                             <label for="familia"> Familia 12 pedaços</label> <br>
 
-                            <input id="massa" class="radios" type="radio" name="tamanho" value="massa"/>
-                            <label for="massa"> Massas</label> <br>
-
-                            <input id="combinado" class="radios" type="radio" name="tamanho" value="combinado"/>
-                            <label for="combinado"> Combinados</label> <br>
-
-                            <input id="sobremesa" class="radios" type="radio" name="tamanho" value="sobremesa"/>
-                            <label for="sobremesa"> Sobremesas</label> <br>
-
-                            <input id="bebida" class="radios" type="radio" name="tamanho" value="bebida"/>
-                            <label for="bebida"> Bebidas</label> <br>
-                        </div>
-                    </div>
-
-                    <div id="sessaointerativa">
-
-                        <div id="pizza-inteira">
+                            <div id="pizza-inteira">
                             <c:forEach var="pizzas" items="${pizza}">
                                 <div class="titulopreco">
                                     <h3>${pizzas.nome}</h3>
@@ -152,45 +136,82 @@
                             </c:forEach>
                         </div>
 
-                        <div id="massas">
-                            <c:forEach var="massas" items="${massa}">
-                                <div class="titulopreco">
-                                    <h3>${massas.nome}</h3>
-                                    <p class="preco-massa precos">${massas.precoBroto}</p>
-                                </div>
-                                <p class="descricao">${massas.descricao}</p>
-                            </c:forEach>
-                        </div>
+                        <input id="broto-doce" class="radios" type="radio" name="tamanho" value="broto-doce"/>
+                        <label for="broto-doce"> Broto doce 4 pedaços</label> <br>
 
-                        <div id="combinados">
-                            <c:forEach var="combinados" items="${combinado}">
-                                <div class="titulopreco">
-                                    <h3>${combinados.nome}</h3>
-                                    <p class="preco-combinado precos">${combinados.precoBroto}</p>
-                                </div>
-                                <p class="descricao">${combinados.descricao}</p>
-                            </c:forEach>
-                        </div>
+                        <input id="grande-doce" class="radios" type="radio" name="tamanho" value="grande-doce"/>
+                        <label for="grande-doce"> Grande doce 8 pedaços</label> <br>
 
-                        <div id="sobremesas">
-                            <c:forEach var="sobremesas" items="${sobremesa}">
-                                <div class="titulopreco">
-                                    <h3>${sobremesas.nome}</h3>
-                                    <p class="preco-bebida precos">${sobremesas.precoBroto}</p>
-                                </div>
-                                <p class="descricao">${sobremesas.descricao}</p>
-                            </c:forEach>
-                        </div>
+                        <input id="familia-doce" class="radios" type="radio" name="tamanho" value="familia-doce"/>
+                        <label for="familia-doce"> Familia doce 12 pedaços</label> <br>
 
-                        <div id="bebidas">
-                            <c:forEach var="bebidas" items="${bebida}">
-                                <div class="titulopreco">
-                                    <h3>${bebidas.nome}</h3>
-                                    <p class="preco-bebida precos">${bebidas.precoBroto}</p>
-                                </div>
-                                <p class="descricao">${bebidas.descricao}</p>
-                            </c:forEach>
+                        <div id="pizza-inteira-doce">
+                        <c:forEach var="doces" items="${pizzaDoce}">
+                            <div class="titulopreco">
+                                <h3>${doces.nome}</h3>
+                                <p class="preco-broto-doce precos">${doces.precoBroto}</p>
+                                <p class="preco-grande-doce precos">${doces.precoGrande}</p>
+                                <p class="preco-familia-doce precos">${doces.precoFamilia}</p>
+                            </div>
+                            <p class="descricao">${doces.descricao}</p>
+                        </c:forEach>
+                    </div>
+
+                            <input id="massa" class="radios" type="radio" name="tamanho" value="massa"/>
+                            <label for="massa"> Massas</label> <br>
+
+                            <div id="massas">
+                                <c:forEach var="massas" items="${massa}">
+                                    <div class="titulopreco">
+                                        <h3>${massas.nome}</h3>
+                                        <p class="preco-massa precos">${massas.precoBroto}</p>
+                                    </div>
+                                    <p class="descricao">${massas.descricao}</p>
+                                </c:forEach>
+                            </div>
+
+                            <input id="combinado" class="radios" type="radio" name="tamanho" value="combinado"/>
+                            <label for="combinado"> Combinados</label> <br>
+
+                            <div id="combinados">
+                                <c:forEach var="combinados" items="${combinado}">
+                                    <div class="titulopreco">
+                                        <h3>${combinados.nome}</h3>
+                                        <p class="preco-combinado precos">${combinados.precoBroto}</p>
+                                    </div>
+                                    <p class="descricao">${combinados.descricao}</p>
+                                </c:forEach>
+                            </div>
+
+                            <input id="sobremesa" class="radios" type="radio" name="tamanho" value="sobremesa"/>
+                            <label for="sobremesa"> Sobremesas</label> <br>
+
+                            <div id="sobremesas">
+                                <c:forEach var="sobremesas" items="${sobremesa}">
+                                    <div class="titulopreco">
+                                        <h3>${sobremesas.nome}</h3>
+                                        <p class="preco-bebida precos">${sobremesas.precoBroto}</p>
+                                    </div>
+                                    <p class="descricao">${sobremesas.descricao}</p>
+                                </c:forEach>
+                            </div>
+
+                            <input id="bebida" class="radios" type="radio" name="tamanho" value="bebida"/>
+                            <label for="bebida"> Bebidas</label> <br>
+
+                            <div id="bebidas">
+                                <c:forEach var="bebidas" items="${bebida}">
+                                    <div class="titulopreco">
+                                        <h3>${bebidas.nome}</h3>
+                                        <p class="preco-bebida precos">${bebidas.precoBroto}</p>
+                                    </div>
+                                    <p class="descricao">${bebidas.descricao}</p>
+                                </c:forEach>
+                            </div>
                         </div>
+                    </div>
+
+                    <div id="sessaointerativa">
                     </div>
                 </div>
             </div>

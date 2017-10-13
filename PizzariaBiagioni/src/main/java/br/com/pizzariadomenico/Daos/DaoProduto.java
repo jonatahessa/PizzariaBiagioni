@@ -57,7 +57,7 @@ public class DaoProduto {
 
     public static List<Produto> listarManutencao()
             throws SQLException, Exception {
-        String sql = "SELECT * FROM Pizzas ORDER BY ID;";
+        String sql = "SELECT * FROM Pizzas ORDER BY Nome;";
 
         return executarConsulta(sql);
     }
