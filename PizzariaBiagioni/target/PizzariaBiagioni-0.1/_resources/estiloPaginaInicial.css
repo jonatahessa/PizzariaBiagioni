@@ -4,6 +4,13 @@ html, body {
     padding: 0;
 }
 
+
+
+@font-face {
+     font-family: FORTE;
+     src: url(../_fonts/FORTE.TTF);
+}
+
 body{
     background: url(../_imagens/background.jpg) center center no-repeat fixed;
     -webkit-background-size: cover;
@@ -58,6 +65,18 @@ section {
     color: #6D6D6D;
 }
 
+#biagioni {
+  font-family: 'FORTE';
+}
+
+#decorated {
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: red;
+    font-size: 55px;
+    font-weight: bold;
+    color: #FECD18;
+    }
+
 #info {
   margin: 0;
   padding-top: 80px;
@@ -71,7 +90,6 @@ section {
   margin-left: 3%;
   font-size: 40px;
   color: #ebebeb;
-  font-family: 'Courgette', cursive;
 }
 
 #info h2 {
@@ -224,6 +242,15 @@ section {
     margin-top: 2%;
 }
 
+.escolha-pizzas {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.escolha-pizzas div {
+  margin-bottom: 2%;
+}
+
 .escolha-pizzas h3 {
 }
 
@@ -234,10 +261,6 @@ section {
 
 #sessaocardapio {
 
-}
-
-#sessaointerativa {
-  margin-top: 5%;
 }
 
 #pizza-inteira {
@@ -355,6 +378,10 @@ section {
 
 #sessaocontato div {
     height: 100%;
+}
+
+#horario {
+  font-size: 35px;
 }
 
 #copyright {

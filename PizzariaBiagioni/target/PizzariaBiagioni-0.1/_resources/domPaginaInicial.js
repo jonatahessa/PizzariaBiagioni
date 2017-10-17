@@ -39,6 +39,8 @@ function changeBroto() {
     familia[i].style.display = 'none';
   }
   document.querySelector("#sessaocardapio").scrollIntoView();
+  document.querySelector("#broto").classList.remove('btn-default');
+  document.querySelector("#broto").classList.add('btn-primary');
 }
 
 function changeGrande() {
@@ -60,6 +62,8 @@ function changeGrande() {
     familia[i].style.display = 'none';
   }
   document.querySelector("#sessaocardapio").scrollIntoView();
+  document.querySelector("#grande").classList.remove('btn-default');
+  document.querySelector("#grande").classList.add('btn-primary');
 }
 
 function changeFamilia() {
@@ -81,6 +85,8 @@ function changeFamilia() {
     familia[i].style.display = 'block';
   }
   document.querySelector("#sessaocardapio").scrollIntoView();
+  document.querySelector("#familia").classList.remove('btn-default');
+  document.querySelector("#familia").classList.add('btn-primary');
 }
 
 function changeBrotoDoce() {
@@ -102,6 +108,8 @@ function changeBrotoDoce() {
     familia[i].style.display = 'none';
   }
   document.querySelector("#sessaocardapio").scrollIntoView();
+  document.querySelector("#broto-doce").classList.remove('btn-default');
+  document.querySelector("#broto-doce").classList.add('btn-primary');
 }
 
 function changeGrandeDoce() {
@@ -123,6 +131,8 @@ function changeGrandeDoce() {
     familia[i].style.display = 'none';
   }
   document.querySelector("#sessaocardapio").scrollIntoView();
+  document.querySelector("#grande-doce").classList.remove('btn-default');
+  document.querySelector("#grande-doce").classList.add('btn-primary');
 }
 
 function changeFamiliaDoce() {
@@ -144,6 +154,8 @@ function changeFamiliaDoce() {
     familia[i].style.display = 'block';
   }
   document.querySelector("#sessaocardapio").scrollIntoView();
+  document.querySelector("#familia-doce").classList.remove('btn-default');
+  document.querySelector("#familia-doce").classList.add('btn-primary');
 }
 
 function changeMassa() {
@@ -154,6 +166,8 @@ function changeMassa() {
   document.querySelector("#bebidas").style.display = 'none';
   document.querySelector("#sobremesas").style.display = 'none';
   document.querySelector("#sessaocardapio").scrollIntoView();
+  document.querySelector("#massa").classList.remove('btn-default');
+  document.querySelector("#massa").classList.add('btn-primary');
 }
 
 function changeCombinado() {
@@ -164,7 +178,8 @@ function changeCombinado() {
   document.querySelector("#bebidas").style.display = 'none';
   document.querySelector("#sobremesas").style.display = 'none';
   document.querySelector("#sessaocardapio").scrollIntoView();
-
+  document.querySelector("#combinado").classList.remove('btn-default');
+  document.querySelector("#combinado").classList.add('btn-primary');
 }
 
 function changeSobremesa() {
@@ -175,8 +190,8 @@ function changeSobremesa() {
   document.querySelector("#bebidas").style.display = 'none';
   document.querySelector("#sobremesas").style.display = 'block';
   document.querySelector("#sessaocardapio").scrollIntoView();
-
-
+  document.querySelector("#sobremesa").classList.remove('btn-default');
+  document.querySelector("#sobremesa").classList.add('btn-primary');
 }
 
 function changeBebida() {
@@ -187,7 +202,8 @@ function changeBebida() {
   document.querySelector("#bebidas").style.display = 'block';
   document.querySelector("#sobremesas").style.display = 'none';
   document.querySelector("#sessaocardapio").scrollIntoView();
-
+  document.querySelector("#bebida").classList.remove('btn-default');
+  document.querySelector("#bebida").classList.add('btn-primary');
 }
 
 function home() { window.scrollTo(0, 0); }

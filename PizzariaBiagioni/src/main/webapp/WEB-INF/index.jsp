@@ -38,7 +38,7 @@
             </div>
 
             <div id="info">
-                <h1>Pizzas e Massas Biagioni</h1>
+                <h1 id="biagioni"> <span id="decorated">Biagioni </span>Pizzas e Massas</h1>
                 <h2><a href="tel:01128251552">2825-1552 -</a>
                     <a href="tel:01145059866">4505-9866 -</a>
                     <a href="tel:011995937704">99593-7704 </a><img src="_imagens/whatsapp.png"></h2>
@@ -55,19 +55,19 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img class="imgs-carousel" src="_imagens/carousel1.jpg" alt="...">
+                        <img class="imgs-carousel" src="_imagens/biagioni01.PNG" alt="...">
                         <div class="carousel-caption">
                         </div>
                     </div>
 
                     <div class="item">
-                        <img class="imgs-carousel" src="_imagens/carousel2.jpg" alt="...">
+                        <img class="imgs-carousel" src="_imagens/biagioni02.PNG" alt="...">
                         <div class="carousel-caption">
                         </div>
                     </div>
 
                     <div class="item">
-                        <img class="imgs-carousel" src="_imagens/carousel3.jpg" alt="...">
+                        <img class="imgs-carousel" src="_imagens/biagioni03.PNG" alt="...">
                         <div class="carousel-caption">
                         </div>
                     </div>
@@ -115,50 +115,53 @@
 
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 input-group escolha-pizzas">
 
-                            <input id="broto" class="radios" type="radio" name="tamanho" value="broto"/>
-                            <label for="broto"> Broto 4 pedaços</label> <br>
+                            <div class="">
+                                <button id="broto" class="btn btn-default btn-lg" type="button" name="button">Broto 4 pedaços</button>
 
-                            <input id="grande" class="radios" type="radio" name="tamanho" value="grande"/>
-                            <label for="grande"> Grande 8 pedaços</label> <br>
+                                <button id="grande" class="btn btn-default btn-lg" type="button" name="button">Grande 8 pedaços</button>
 
-                            <input id="familia" class="radios" type="radio" name="tamanho" value="familia"/>
-                            <label for="familia"> Familia 12 pedaços</label> <br>
+                                <button id="familia" class="btn btn-default btn-lg" type="button" name="button">Familia 12 pedaços</button>
+                            </div>
+
 
                             <div id="pizza-inteira">
-                            <c:forEach var="pizzas" items="${pizza}">
-                                <div class="titulopreco">
-                                    <h3>${pizzas.nome}</h3>
-                                    <p class="preco-broto precos">${pizzas.precoBroto}</p>
-                                    <p class="preco-grande precos">${pizzas.precoGrande}</p>
-                                    <p class="preco-familia precos">${pizzas.precoFamilia}</p>
-                                </div>
-                                <p class="descricao">${pizzas.descricao}</p>
-                            </c:forEach>
-                        </div>
-
-                        <input id="broto-doce" class="radios" type="radio" name="tamanho" value="broto-doce"/>
-                        <label for="broto-doce"> Broto doce 4 pedaços</label> <br>
-
-                        <input id="grande-doce" class="radios" type="radio" name="tamanho" value="grande-doce"/>
-                        <label for="grande-doce"> Grande doce 8 pedaços</label> <br>
-
-                        <input id="familia-doce" class="radios" type="radio" name="tamanho" value="familia-doce"/>
-                        <label for="familia-doce"> Familia doce 12 pedaços</label> <br>
-
-                        <div id="pizza-inteira-doce">
-                        <c:forEach var="doces" items="${pizzaDoce}">
-                            <div class="titulopreco">
-                                <h3>${doces.nome}</h3>
-                                <p class="preco-broto-doce precos">${doces.precoBroto}</p>
-                                <p class="preco-grande-doce precos">${doces.precoGrande}</p>
-                                <p class="preco-familia-doce precos">${doces.precoFamilia}</p>
+                                <c:forEach var="pizzas" items="${pizza}">
+                                    <div class="titulopreco">
+                                        <h3>${pizzas.nome}</h3>
+                                        <p class="preco-broto precos">${pizzas.precoBroto}</p>
+                                        <p class="preco-grande precos">${pizzas.precoGrande}</p>
+                                        <p class="preco-familia precos">${pizzas.precoFamilia}</p>
+                                    </div>
+                                    <p class="descricao">${pizzas.descricao}</p>
+                                </c:forEach>
                             </div>
-                            <p class="descricao">${doces.descricao}</p>
-                        </c:forEach>
-                    </div>
 
-                            <input id="massa" class="radios" type="radio" name="tamanho" value="massa"/>
-                            <label for="massa"> Massas</label> <br>
+                            <div class="">
+
+                              <button id="broto-doce" class="btn btn-default btn-lg" type="button">Broto doce 4 pedaços</button>
+
+                              <button id="grande-doce" class="btn btn-default btn-lg" type="button">Grande doce 8 pedaços</button>
+
+                              <button id="familia-doce" class="btn btn-default btn-lg" type="button">Familia doce 12 pedaços</button>
+
+                            </div>
+
+
+                            <div id="pizza-inteira-doce">
+                                <c:forEach var="doces" items="${pizzaDoce}">
+                                    <div class="titulopreco">
+                                        <h3>${doces.nome}</h3>
+                                        <p class="preco-broto-doce precos">${doces.precoBroto}</p>
+                                        <p class="preco-grande-doce precos">${doces.precoGrande}</p>
+                                        <p class="preco-familia-doce precos">${doces.precoFamilia}</p>
+                                    </div>
+                                    <p class="descricao">${doces.descricao}</p>
+                                </c:forEach>
+                            </div>
+
+                            <div class="">
+                              <button id="massa" class="btn btn-default btn-lg" type="button" name="button">Massas</button>
+                            </div>
 
                             <div id="massas">
                                 <c:forEach var="massas" items="${massa}">
@@ -170,8 +173,10 @@
                                 </c:forEach>
                             </div>
 
-                            <input id="combinado" class="radios" type="radio" name="tamanho" value="combinado"/>
-                            <label for="combinado"> Combinados</label> <br>
+                            <div class="">
+                              <button id="combinado" class="btn btn-default btn-lg" type="button" name="button">Combinados</button>
+                            </div>
+
 
                             <div id="combinados">
                                 <c:forEach var="combinados" items="${combinado}">
@@ -183,8 +188,9 @@
                                 </c:forEach>
                             </div>
 
-                            <input id="sobremesa" class="radios" type="radio" name="tamanho" value="sobremesa"/>
-                            <label for="sobremesa"> Sobremesas</label> <br>
+                            <div class="">
+                              <button id="sobremesa" class="btn btn-default btn-lg" type="button" name="button">Sobremesas</button>
+                            </div>
 
                             <div id="sobremesas">
                                 <c:forEach var="sobremesas" items="${sobremesa}">
@@ -196,8 +202,9 @@
                                 </c:forEach>
                             </div>
 
-                            <input id="bebida" class="radios" type="radio" name="tamanho" value="bebida"/>
-                            <label for="bebida"> Bebidas</label> <br>
+                            <div class="">
+                              <button id="bebida" class="btn btn-default btn-lg" type="button" name="button">Bebidas</button>
+                            </div>
 
                             <div id="bebidas">
                                 <c:forEach var="bebidas" items="${bebida}">
@@ -209,9 +216,6 @@
                                 </c:forEach>
                             </div>
                         </div>
-                    </div>
-
-                    <div id="sessaointerativa">
                     </div>
                 </div>
             </div>
@@ -228,7 +232,7 @@
                     <h2><a href="tel:01128251552">2825-1552</a><br/>
                         <a href="tel:01145059866">4505-9866</a><br/>
                         <a href="tel:011995937704">99593-7704 </a><img src="_imagens/whatsapp.png"></h2>
-                    <p>De Terça à Domingo das 18h às 00h</p>
+                    <p id="horario">Todos os dias das 18h às 23h</p>
                     <p id="copyright">Copyright (c) Pizzaria Biagioni Copyright Holder All Rights Reserved. <br>
                         Developed by Jonata Hessa.</p>
                 </div>
