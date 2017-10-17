@@ -7,8 +7,8 @@ html, body {
 
 
 @font-face {
-     font-family: FORTE;
-     src: url(../_fonts/FORTE.TTF);
+    font-family: FORTE;
+    src: url(../_fonts/FORTE.TTF);
 }
 
 body{
@@ -66,7 +66,7 @@ section {
 }
 
 #biagioni {
-  font-family: 'FORTE';
+    font-family: 'FORTE';
 }
 
 #decorated {
@@ -75,35 +75,35 @@ section {
     font-size: 55px;
     font-weight: bold;
     color: #FECD18;
-    }
+}
 
 #info {
-  margin: 0;
-  padding-top: 80px;
-  padding-bottom: 15px;
-  width: 100%;
-  background-color: black;
-  opacity: 0.9;
+    margin: 0;
+    padding-top: 80px;
+    padding-bottom: 15px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.9;
 }
 
 #info h1 {
-  margin-left: 3%;
-  font-size: 40px;
-  color: #ebebeb;
+    margin-left: 3%;
+    font-size: 40px;
+    color: #ebebeb;
 }
 
 #info h2 {
-  text-align: center;
-  font-size: 35px;
+    text-align: center;
+    font-size: 35px;
 }
 
 #info a {
-  color: #ebebeb;
-  font-family: 'Courgette', cursive;
+    color: #ebebeb;
+    font-family: 'Courgette', cursive;
 }
 
 #info img {
-  width: 30px;
+    width: 30px;
 }
 
 /**#firstimg {
@@ -242,15 +242,6 @@ section {
     margin-top: 2%;
 }
 
-.escolha-pizzas {
-  margin-top: 3%;
-  margin-bottom: 3%;
-}
-
-.escolha-pizzas div {
-  margin-bottom: 2%;
-}
-
 .escolha-pizzas h3 {
 }
 
@@ -259,73 +250,80 @@ section {
     margin-top: 3%;
 }
 
-#sessaocardapio {
+#sessaocardapio button {
+  margin: 2% auto;
+}
 
+@media only screen and (max-device-width: 900px) {
+  #sessaocardapio button {
+    width: 100%;
+    font-size: 45px;
+  }
 }
 
 #pizza-inteira {
-  display: none;
+    display: none;
 }
 
 #pizza-inteira-doce {
-  display: none;
+    display: none;
 }
 
 #massas {
-  display: none;
+    display: none;
 }
 
 #combinados {
-  display: none;
+    display: none;
 }
 
 #pizza-meia {
-  display: none;
+    display: none;
 }
 
 #pizza-terco {
-  display: none;
+    display: none;
 }
 
 #sobremesas {
-  display: none;
+    display: none;
 }
 
 #bebidas {
-  display: none;
+    display: none;
 }
 
 .preco-broto {
 }
 
 .preco-grande {
-  display: none;
+    display: none;
 }
 
 .preco-familia {
-  display: none;
+    display: none;
 }
 
 .titulopreco {
-  border-bottom: 1px dotted gray;
+    border-bottom: 1px dotted gray;
 }
 
 .titulopreco h3 {
-  font-size: 30px;
-  width: 50%;
-  margin: 0;
-  display: inline;
-  color: green;
+    font-size: 30px;
+    width: 50%;
+    margin: 0;
+    display: inline;
+    color: green;
 }
 
 .precos {
-  font-size: 30px;
-  color: red;
-  float: right;
+    font-size: 30px;
+    color: red;
+    float: right;
 }
 
 .descricao {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 
@@ -381,7 +379,7 @@ section {
 }
 
 #horario {
-  font-size: 35px;
+    font-size: 35px;
 }
 
 #copyright {
