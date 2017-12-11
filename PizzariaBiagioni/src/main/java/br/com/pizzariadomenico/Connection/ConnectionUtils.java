@@ -25,8 +25,8 @@ public class ConnectionUtils {
             String serveName = "bancobiagioni1.mysql.uhserver.com"; // Caminho do servidor do BD
             String mydatabase = "bancobiagioni1"; // Nome do banco de dados
             String url = "jdbc:mysql://" + serveName + "/" + mydatabase;
-            String username = "biagioni01"; // Nome de usuario
-            String password = "pizz@ri@2017"; // Senha de acesso
+            String username = ""; // Nome de usuario
+            String password = ""; // Senha de acesso
             connection = DriverManager.getConnection(url, username, password);
             
             //Teste de conexao
