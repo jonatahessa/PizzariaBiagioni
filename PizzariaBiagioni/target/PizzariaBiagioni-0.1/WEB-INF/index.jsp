@@ -38,7 +38,7 @@
             </div>
 
             <div id="info">
-                <h1 id="biagioni"> <span id="decorated">Biagioni </span>Pizzas e Massas</h1>
+                <h1 id="biagioni"> <span id="decorated">Biagioni </span>Pizzas</h1>
                 <h2><a href="tel:01128251552">2825-1552 -</a>
                     <a href="tel:01145059866">4505-9866 -</a>
                     <a href="tel:011995937704">99593-7704 </a><img src="_imagens/whatsapp.png"></h2>
@@ -159,7 +159,7 @@
                                 </c:forEach>
                             </div>
 
-                            <div class="">
+                            <!--<div class="">
                               <button id="massa" class="btn btn-default btn-lg" type="button" name="button">Massas</button>
                             </div>
 
@@ -186,7 +186,7 @@
                                     </div>
                                     <p class="descricao">${combinados.descricao}</p>
                                 </c:forEach>
-                            </div>
+                            </div>-->
 
                             <div class="">
                               <button id="sobremesa" class="btn btn-default btn-lg" type="button" name="button">Sobremesas</button>

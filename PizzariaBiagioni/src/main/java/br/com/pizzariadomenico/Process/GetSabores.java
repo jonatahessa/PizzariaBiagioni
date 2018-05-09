@@ -30,15 +30,11 @@ public class GetSabores extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         List<Produto> pizza = Utils.ListarPizzasPaginaInicialPizzas();
         List<Produto> pizzaDoce = Utils.ListarPizzasPaginaInicialPizzasDoces();
-        List<Produto> massa = Utils.ListarPizzasPaginaInicialMassas();
-        List<Produto> combinado = Utils.ListarPizzasPaginaInicialCombinados();
         List<Produto> sobremesa = Utils.ListarPizzasPaginaInicialSobremesas();
         List<Produto> bebida = Utils.ListarPizzasPaginaInicialBebidas();
         List<Produto> promo = Utils.ListarPizzasPaginaInicialPromocoes();
         request.setAttribute("pizza", pizza);
         request.setAttribute("pizzaDoce", pizzaDoce);
-        request.setAttribute("massa", massa);
-        request.setAttribute("combinado", combinado);
         request.setAttribute("sobremesa", sobremesa);
         request.setAttribute("bebida", bebida);
         if (promo != null) {

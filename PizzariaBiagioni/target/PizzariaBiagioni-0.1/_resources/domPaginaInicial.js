@@ -5,8 +5,8 @@ function main() {
     document.querySelector("#broto-doce").addEventListener("click", changeBrotoDoce);
     document.querySelector("#grande-doce").addEventListener("click", changeGrandeDoce);
     document.querySelector("#familia-doce").addEventListener("click", changeFamiliaDoce);
-    document.querySelector("#massa").addEventListener("click", changeMassa);
-    document.querySelector("#combinado").addEventListener("click", changeCombinado);
+    /*document.querySelector("#massa").addEventListener("click", changeMassa);
+    document.querySelector("#combinado").addEventListener("click", changeCombinado);*/
     document.querySelector("#sobremesa").addEventListener("click", changeSobremesa);
     document.querySelector("#bebida").addEventListener("click", changeBebida);
 
@@ -33,8 +33,8 @@ function changeBroto() {
 
         document.querySelector("#pizza-inteira").style.display = 'block';
         document.querySelector("#pizza-inteira-doce").style.display = 'none';
-        document.querySelector("#massas").style.display = 'none';
-        document.querySelector("#combinados").style.display = 'none';
+        /*document.querySelector("#massas").style.display = 'none';
+        document.querySelector("#combinados").style.display = 'none';*/
         document.querySelector("#bebidas").style.display = 'none';
         document.querySelector("#sobremesas").style.display = 'none';
 
@@ -58,10 +58,10 @@ function changeBroto() {
         document.querySelector("#familia-doce").classList.remove('btn-primary');
         document.querySelector("#grande").classList.add('btn-default');
         document.querySelector("#grande").classList.remove('btn-primary');
-        document.querySelector("#massa").classList.add('btn-default');
+        /*document.querySelector("#massa").classList.add('btn-default');
         document.querySelector("#massa").classList.remove('btn-primary');
         document.querySelector("#combinado").classList.add('btn-default');
-        document.querySelector("#combinado").classList.remove('btn-primary');
+        document.querySelector("#combinado").classList.remove('btn-primary');*/
         document.querySelector("#bebida").classList.add('btn-default');
         document.querySelector("#bebida").classList.remove('btn-primary');
     }
@@ -81,8 +81,8 @@ function changeGrande() {
 
         document.querySelector("#pizza-inteira").style.display = 'block';
         document.querySelector("#pizza-inteira-doce").style.display = 'none';
-        document.querySelector("#massas").style.display = 'none';
-        document.querySelector("#combinados").style.display = 'none';
+        /*document.querySelector("#massas").style.display = 'none';
+        document.querySelector("#combinados").style.display = 'none';*/
         document.querySelector("#bebidas").style.display = 'none';
         document.querySelector("#sobremesas").style.display = 'none';
 
@@ -106,10 +106,10 @@ function changeGrande() {
         document.querySelector("#familia-doce").classList.remove('btn-primary');
         document.querySelector("#sobremesa").classList.add('btn-default');
         document.querySelector("#sobremesa").classList.remove('btn-primary');
-        document.querySelector("#massa").classList.add('btn-default');
+        /*document.querySelector("#massa").classList.add('btn-default');
         document.querySelector("#massa").classList.remove('btn-primary');
         document.querySelector("#combinado").classList.add('btn-default');
-        document.querySelector("#combinado").classList.remove('btn-primary');
+        document.querySelector("#combinado").classList.remove('btn-primary');*/
         document.querySelector("#bebida").classList.add('btn-default');
         document.querySelector("#bebida").classList.remove('btn-primary');
     }
@@ -128,8 +128,8 @@ function changeFamilia() {
 
         document.querySelector("#pizza-inteira").style.display = 'block';
         document.querySelector("#pizza-inteira-doce").style.display = 'none';
-        document.querySelector("#massas").style.display = 'none';
-        document.querySelector("#combinados").style.display = 'none';
+        /*document.querySelector("#massas").style.display = 'none';
+        document.querySelector("#combinados").style.display = 'none';*/
         document.querySelector("#bebidas").style.display = 'none';
         document.querySelector("#sobremesas").style.display = 'none';
 
@@ -153,10 +153,10 @@ function changeFamilia() {
         document.querySelector("#familia-doce").classList.remove('btn-primary');
         document.querySelector("#sobremesa").classList.add('btn-default');
         document.querySelector("#sobremesa").classList.remove('btn-primary');
-        document.querySelector("#massa").classList.add('btn-default');
+        /*document.querySelector("#massa").classList.add('btn-default');
         document.querySelector("#massa").classList.remove('btn-primary');
         document.querySelector("#combinado").classList.add('btn-default');
-        document.querySelector("#combinado").classList.remove('btn-primary');
+        document.querySelector("#combinado").classList.remove('btn-primary');*/
         document.querySelector("#bebida").classList.add('btn-default');
         document.querySelector("#bebida").classList.remove('btn-primary');
     }
@@ -175,8 +175,8 @@ function changeBrotoDoce() {
 
         document.querySelector("#pizza-inteira-doce").style.display = 'block';
         document.querySelector("#pizza-inteira").style.display = 'none';
-        document.querySelector("#massas").style.display = 'none';
-        document.querySelector("#combinados").style.display = 'none';
+        /*document.querySelector("#massas").style.display = 'none';
+        document.querySelector("#combinados").style.display = 'none';*/
         document.querySelector("#bebidas").style.display = 'none';
         document.querySelector("#sobremesas").style.display = 'none';
 
@@ -200,10 +200,10 @@ function changeBrotoDoce() {
         document.querySelector("#familia-doce").classList.remove('btn-primary');
         document.querySelector("#sobremesa").classList.add('btn-default');
         document.querySelector("#sobremesa").classList.remove('btn-primary');
-        document.querySelector("#massa").classList.add('btn-default');
+        /*document.querySelector("#massa").classList.add('btn-default');
         document.querySelector("#massa").classList.remove('btn-primary');
         document.querySelector("#combinado").classList.add('btn-default');
-        document.querySelector("#combinado").classList.remove('btn-primary');
+        document.querySelector("#combinado").classList.remove('btn-primary');*/
         document.querySelector("#bebida").classList.add('btn-default');
         document.querySelector("#bebida").classList.remove('btn-primary');
     }
@@ -222,8 +222,8 @@ function changeGrandeDoce() {
 
         document.querySelector("#pizza-inteira-doce").style.display = 'block';
         document.querySelector("#pizza-inteira").style.display = 'none';
-        document.querySelector("#massas").style.display = 'none';
-        document.querySelector("#combinados").style.display = 'none';
+        /*document.querySelector("#massas").style.display = 'none';
+        document.querySelector("#combinados").style.display = 'none';*/
         document.querySelector("#bebidas").style.display = 'none';
         document.querySelector("#sobremesas").style.display = 'none';
 
@@ -247,10 +247,10 @@ function changeGrandeDoce() {
         document.querySelector("#familia-doce").classList.remove('btn-primary');
         document.querySelector("#sobremesa").classList.add('btn-default');
         document.querySelector("#sobremesa").classList.remove('btn-primary');
-        document.querySelector("#massa").classList.add('btn-default');
+        /*document.querySelector("#massa").classList.add('btn-default');
         document.querySelector("#massa").classList.remove('btn-primary');
         document.querySelector("#combinado").classList.add('btn-default');
-        document.querySelector("#combinado").classList.remove('btn-primary');
+        document.querySelector("#combinado").classList.remove('btn-primary');*/
         document.querySelector("#bebida").classList.add('btn-default');
         document.querySelector("#bebida").classList.remove('btn-primary');
     }
@@ -269,8 +269,8 @@ function changeFamiliaDoce() {
 
         document.querySelector("#pizza-inteira-doce").style.display = 'block';
         document.querySelector("#pizza-inteira").style.display = 'none';
-        document.querySelector("#massas").style.display = 'none';
-        document.querySelector("#combinados").style.display = 'none';
+        /*document.querySelector("#massas").style.display = 'none';
+        document.querySelector("#combinados").style.display = 'none';*/
         document.querySelector("#bebidas").style.display = 'none';
         document.querySelector("#sobremesas").style.display = 'none';
 
@@ -294,16 +294,16 @@ function changeFamiliaDoce() {
         document.querySelector("#familia").classList.remove('btn-primary');
         document.querySelector("#sobremesa").classList.add('btn-default');
         document.querySelector("#sobremesa").classList.remove('btn-primary');
-        document.querySelector("#massa").classList.add('btn-default');
+        /*document.querySelector("#massa").classList.add('btn-default');
         document.querySelector("#massa").classList.remove('btn-primary');
         document.querySelector("#combinado").classList.add('btn-default');
-        document.querySelector("#combinado").classList.remove('btn-primary');
+        document.querySelector("#combinado").classList.remove('btn-primary');*/
         document.querySelector("#bebida").classList.add('btn-default');
         document.querySelector("#bebida").classList.remove('btn-primary');
     }
 }
 
-function changeMassa() {
+/*function changeMassa() {
     if (document.querySelector("#massa").classList.contains('btn-primary')) {
         document.querySelector("#massas").style.display = 'none';
         document.querySelector("#massa").classList.remove('btn-primary');
@@ -373,7 +373,7 @@ function changeCombinado() {
         document.querySelector("#bebida").classList.add('btn-default');
         document.querySelector("#bebida").classList.remove('btn-primary');
     }
-}
+}*/
 
 function changeSobremesa() {
     if (document.querySelector("#sobremesa").classList.contains('btn-primary')) {
@@ -383,8 +383,8 @@ function changeSobremesa() {
     } else {
         document.querySelector("#pizza-inteira").style.display = 'none';
         document.querySelector("#pizza-inteira-doce").style.display = 'none';
-        document.querySelector("#massas").style.display = 'none';
-        document.querySelector("#combinados").style.display = 'none';
+        /*document.querySelector("#massas").style.display = 'none';
+        document.querySelector("#combinados").style.display = 'none';*/
         document.querySelector("#bebidas").style.display = 'none';
         document.querySelector("#sobremesas").style.display = 'block';
         document.querySelector("#sessaocardapio").scrollIntoView();
@@ -400,10 +400,10 @@ function changeSobremesa() {
         document.querySelector("#grande-doce").classList.remove('btn-primary');
         document.querySelector("#familia-doce").classList.add('btn-default');
         document.querySelector("#familia-doce").classList.remove('btn-primary');
-        document.querySelector("#massa").classList.add('btn-default');
+        /*document.querySelector("#massa").classList.add('btn-default');
         document.querySelector("#massa").classList.remove('btn-primary');
         document.querySelector("#combinado").classList.add('btn-default');
-        document.querySelector("#combinado").classList.remove('btn-primary');
+        document.querySelector("#combinado").classList.remove('btn-primary');*/
         document.querySelector("#familia").classList.add('btn-default');
         document.querySelector("#familia").classList.remove('btn-primary');
         document.querySelector("#bebida").classList.add('btn-default');
@@ -419,8 +419,8 @@ function changeBebida() {
     } else {
         document.querySelector("#pizza-inteira").style.display = 'none';
         document.querySelector("#pizza-inteira-doce").style.display = 'none';
-        document.querySelector("#massas").style.display = 'none';
-        document.querySelector("#combinados").style.display = 'none';
+        /*document.querySelector("#massas").style.display = 'none';
+        document.querySelector("#combinados").style.display = 'none';*/
         document.querySelector("#bebidas").style.display = 'block';
         document.querySelector("#sobremesas").style.display = 'none';
         document.querySelector("#sessaocardapio").scrollIntoView();
@@ -436,10 +436,10 @@ function changeBebida() {
         document.querySelector("#grande-doce").classList.remove('btn-primary');
         document.querySelector("#familia-doce").classList.add('btn-default');
         document.querySelector("#familia-doce").classList.remove('btn-primary');
-        document.querySelector("#massa").classList.add('btn-default');
+        /*document.querySelector("#massa").classList.add('btn-default');
         document.querySelector("#massa").classList.remove('btn-primary');
         document.querySelector("#combinado").classList.add('btn-default');
-        document.querySelector("#combinado").classList.remove('btn-primary');
+        document.querySelector("#combinado").classList.remove('btn-primary');*/
         document.querySelector("#familia").classList.add('btn-default');
         document.querySelector("#familia").classList.remove('btn-primary');
         document.querySelector("#sobremesa").classList.add('btn-default');
