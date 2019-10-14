@@ -40,7 +40,7 @@
             <div id="info">
                 <h1 id="biagioni"> <span id="decorated">Biagioni </span>Pizzas</h1>
                 <h2><a href="tel:01128251552">2825-1552 -</a>
-                    <a href="tel:01145059866">4505-9866 -</a>
+                    <a href="tel:01156797979">5679-7979 -</a>
                     <a href="tel:011995937704">99593-7704 </a><img src="_imagens/whatsapp.png"></h2>
             </div>
 
@@ -55,7 +55,7 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                        <img class="imgs-carousel" src="_imagens/biagioni01.PNG" alt="...">
+                        <img class="imgs-carousel" src="_imagens/biagioni.png" alt="...">
                         <div class="carousel-caption">
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                     </div>
 
                     <div class="item">
-                        <img class="imgs-carousel" src="_imagens/Entrada.PNG" alt="...">
+                        <img class="imgs-carousel" src="_imagens/frente.jpeg" alt="...">
                         <div class="carousel-caption">
                         </div>
                     </div>
@@ -92,6 +92,54 @@
                 <p>Sendo a melhor opção da Vila Mascote a BIAGIONI juntou a tradição da pizza com a sofisticação informal. Adotando sempre o lema: “Atender bem para atender sempre” como sinônimo de qualidade.</p>
                 <p>Com uma localização privilegiada: na Avenida Damasceno Vieira, uma das principais artérias comerciais da Vila Mascote. Com investimento constante nas instalações, produtos e serviços, faz com que a BIAGIONI seja considerada um clássico de São Paulo, terra das pizzarias.</p>
                 <p>Todos os recursos são colocados à disposição dos funcionários, para que a filosofia desde a fundação continue: SERVIR PIZZAS COM DEDICAÇÃO, CARINHO E ALEGRIA.</p>
+            </div>
+
+            <div class="sessoes bckgrounded">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-xs-6 col-md-3">
+                    <img class="img-responsive" src="_imagens/parma.jpg" alt=""/>
+                    <h4 class="text-center text-warning fonte-courgette">Parma e Marguerita</h4>
+                  </div>
+
+                  <div class="col-xs-6 col-md-3">
+                    <img class="img-responsive" src="_imagens/kani.jpg" alt=""/>
+                    <h4 class="text-center text-warning fonte-courgette">Kani</h4>
+                  </div>
+
+                  <div class="col-xs-6 col-md-3">
+                    <img class="img-responsive" src="_imagens/shitake.jpg" alt=""/>
+                    <h4 class="text-center text-warning fonte-courgette">Shitake e Napolitana</h4>
+                  </div>
+
+                  <div class="col-xs-6 col-md-3">
+                    <img class="img-responsive" src="_imagens/rucula.jpg" alt=""/>
+                    <h4 class="text-center text-warning fonte-courgette">Rúcula e Marguerita</h4>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-6 col-md-3">
+                    <img class="img-responsive" src="_imagens/pacoca.jpg" alt=""/>
+                    <h4 class="text-center text-warning fonte-courgette">Paçoca</h4>
+                  </div>
+
+                  <div class="col-xs-6 col-md-3">
+                    <img class="img-responsive" src="_imagens/confeti.jpg" alt=""/>
+                    <h4 class="text-center text-warning fonte-courgette">Confetti, Frutas e Banana</h4>
+                  </div>
+
+                  <div class="col-xs-6 col-md-3">
+                    <img class="img-responsive" src="_imagens/nozes.jpg" alt=""/>
+                    <h4 class="text-center text-warning fonte-courgette">Nutella e Moranguinho</h4>
+                  </div>
+
+                  <div class="col-xs-6 col-md-3">
+                    <img class="img-responsive" src="_imagens/brocolis.jpg" alt=""/>
+                    <h4 class="text-center text-warning fonte-courgette">Camarão Especial e Parma</h4>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <c:if test="${promocoes != null}">
@@ -222,7 +270,7 @@
 
             <div class="sessoes bckgrounded" id="sessaolocalizacao">
                 <h1 class="titulos">Localização</h1>
-                <p>Avenida Damasceno Vieira, 1072 - Vila Mascote, São Paulo - SP</p>
+                <p>Avenida Damasceno Vieira, 1070 - Vila Mascote, São Paulo - SP</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d913.6956202868464!2d-46.667191465344224!3d-23.647959719879264!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x12c92514e95df00c!2sAthu&#39;s+Pizzaria!5e0!3m2!1spt-BR!2sbr!4v1507126887068" allowfullscreen></iframe>  </div>
 
             <footer id="sessaocontato">
@@ -230,7 +278,7 @@
                     <h1 class="titulos">Contato</h1>
                     <hr/>
                     <h2><a href="tel:01128251552">2825-1552</a><br/>
-                        <a href="tel:01145059866">4505-9866</a><br/>
+                        <a href="tel:01156797979">5679-7979</a><br/>
                         <a href="tel:011995937704">99593-7704 </a><img src="_imagens/whatsapp.png"></h2>
                     <p id="horario">Todos os dias das 18h às 23h</p>
                     <p id="copyright">Copyright (c) Pizzaria Biagioni Copyright Holder All Rights Reserved. <br>
