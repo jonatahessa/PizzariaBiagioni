@@ -121,7 +121,7 @@
                 <div class="row">
                   <div class="col-xs-6 col-md-3">
                     <img class="img-responsive" src="_imagens/pacoca.jpg" alt=""/>
-                    <h4 class="text-center text-warning fonte-courgette">Paçoca</h4>
+                    <h4 class="text-center text-warning fonte-courgette">Romeu e Julieta</h4>
                   </div>
 
                   <div class="col-xs-6 col-md-3">
